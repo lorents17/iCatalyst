@@ -159,9 +159,9 @@ if exist "%filelist%" (
 	if "%jpeg%" neq "0" for /f "tokens=*" %%a in ('findstr /i /e ".jpeg" "%filelist%" ^| find /i /c ".jpeg" 2^>nul') do set /a "TotalNumJPG+=%%a"
 	if "%gif%" neq "0" for /f "tokens=*" %%a in ('findstr /i /e ".gif"  "%filelist%" ^| find /i /c ".gif" 2^>nul') do set /a "TotalNumGIF+=%%a"
 )
-if %TotalNumPNG% gtr 0 (call:png) else set "png=0"
-if %TotalNumJPG% gtr 0 (call:jpeg) else set "jpeg=0"
-if %TotalNumGIF% gtr 0 (call:gif) else set "gif=0"
+if %TotalNumPNG% gtr 0 (if not defined png call:png) else set "png=0"
+if %TotalNumJPG% gtr 0 (if not defined jpeg call:jpeg) else set "jpeg=0"
+if %TotalNumGIF% gtr 0 (if not defined gif call:gif) else set "gif=0"
 if exist "%filelisterr%" (
 	if defined png  for /f "tokens=3 delims=:" %%a in ('findstr /i /e ".png"  "%filelisterr%" ^| find /i /c ".png" 2^>nul') do set /a "TotalNumErrPNG+=%%a"
 	if defined jpeg for /f "tokens=3 delims=:" %%a in ('findstr /i /e ".jpg"  "%filelisterr%" ^| find /i /c ".jpg" 2^>nul') do set /a "TotalNumErrJPG+=%%a"
