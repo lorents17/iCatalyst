@@ -70,8 +70,12 @@ Add folders \ Add files
 
 ![https://hsto.org/files/0fc/f39/4c8/0fcf394c84b848e293ee7cae4ca52d20.png](https://hsto.org/files/0fc/f39/4c8/0fcf394c84b848e293ee7cae4ca52d20.png)
 
-- *Advanced* - использует базовый набор инструментов для оптимизации изображений PNG. Степень сжатия в среднем на 10% выше по сравнению с Adobe Photoshop (Save for Web);
-- *Xtreme* - использует продвинутый набор инструментов для оптимизации изображений PNG. Степень сжатия в среднем на 2% выше по сравнению с режимом оптимизации Advanced, но скорость сжатия ниже 5 раз.
+|Advanced|Xtreme|
+|:-------|:----------|
+|![enter image description here](http://hsto.org/files/854/7c8/404/8547c84042c34393a808798a9f0ecfe9.gif)|![enter image description here](http://hsto.org/files/365/aa3/0ef/365aa30ef6044cd48425b1288f5aeff4.gif)|
+|Размер — 55,57 КБ. Время оптимизации — 1,5 с|Размер — 54,65 КБ. Время оптимизации — 7,5 с|
+|TruePNG + Advdef|TruePNG + PNGWolfZopfli|
+|Степень сжатия в среднем на 10% выше по сравнению с Adobe Photoshop (Save for Web).|Степень сжатия в среднем на 2% выше по сравнению с режимом оптимизации Advanced, но скорость сжатия ниже 5 раз|
 
 ### Параметры оптимизации JPEG
 
