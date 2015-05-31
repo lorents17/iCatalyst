@@ -54,13 +54,12 @@ Options:
 		false - open dialogue to specify where to save images;
 		"full path" - where to save images.
 		For example: "/outdir:C:\temp", if there's no such dir exists, it will be created automatically.
-```
 
-### Add folders \ Add files
-
+Add folders \ Add files
 - Specify full path pointing to images or dirs with images. For example: `"C:\Images" "C:\Photos" "C:\logo.png"`.
 - You can't use symbols such as `&`, `%`, `(`, `)`, `!` etc. in paths.
 - App handles images in directories recursively.
+```
 
 ### Drag and Drop
 
