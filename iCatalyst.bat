@@ -317,12 +317,12 @@ call:echostd " File  - %~f1"
 if "%~4" neq "0" (
 	set "float=%2"
 	call:division float 1024 100
-	call:echostd " In    - !float! Š"
+	call:echostd " In    - !float! ÂŠÂ"
 	set "change=%4"
 	call:division change 1024 100
 	set "float=%3"
 	call:division float 1024 100
-	call:echostd " Out   - !float! Š (!change! Š, %5%%%%%%)"
+	call:echostd " Out   - !float! ÂŠÂ (!change! ÂŠÂ, %5%%%%%%)"
 ) else (
 	call:echostd " Skip  - This image cannot be optimized any further"
 )
@@ -797,7 +797,7 @@ if "%tt%" neq "0" (
 	call:echostd " Optimized %1:		%opt%"
 	if "%nopt%" neq "0" call:echostd " Not optimized %1:	%nopt%"
 	if "%tterr%" neq "0" call:echostd " Skipped %1:		%tterr%"
-	call:echostd " Total %1:  		%%change%1%% Š, %%perc%1%%%%%%"
+	call:echostd " Total %1:  		%%change%1%% ÂŠÂ, %%perc%1%%%%%%"
 	call:echostd
 )
 exit /b
@@ -836,23 +836,23 @@ title [Manual] %name% %version%
 1>&2 echo.
 1>&2 echo  Options:
 1>&2 echo  /png:#	Optimization settings PNG:
-1>&2 echo 	1 - Compression level - Xtreme;
-1>&2 echo 	2 - Compression level - Advanced;
-1>&2 echo 	0 - Skip PNG optimization (default).
+1>&2 echo 	1 - Compression level - Xtreme
+1>&2 echo 	2 - Compression level - Advanced
+1>&2 echo 	0 - Skip PNG optimization (default)
 1>&2 echo.
 1>&2 echo  /jpg:#	Optimization settings JPEG:
-1>&2 echo 	1 - Encoding Process - Baseline;
-1>&2 echo 	2 - Encoding Process - Progressive;
-1>&2 echo 	3 - Optimization settings default;
-1>&2 echo 	0 - Skip JPEG optimization (default).
+1>&2 echo 	1 - Encoding Process - Baseline
+1>&2 echo 	2 - Encoding Process - Progressive
+1>&2 echo 	3 - Optimization settings default
+1>&2 echo 	0 - Skip JPEG optimization (default)
 1>&2 echo.
 1>&2 echo  /gif:#	Optimization settings GIF:
-1>&2 echo 	1 - Optimization settings default:
-1>&2 echo 	0 - Skip GIF optimization (default).
+1>&2 echo 	1 - Optimization settings default
+1>&2 echo 	0 - Skip GIF optimization (default)
 1>&2 echo.
 1>&2 echo  "/outdir:#" Settings save optimized images:
-1>&2 echo 	true  - replace the original image on optimized;
-1>&2 echo 	false - open dialog box for saving images (default);
+1>&2 echo 	true  - replace the original image on optimized
+1>&2 echo 	false - open dialog box for saving images (default)
 1>&2 echo 	"full path to folder - specify the folder to save images.
 1>&2 echo 	for example: "/outdir:C:\temp", if the destination folder does not 
 1>&2 echo 	exist, it will be created automatically.
