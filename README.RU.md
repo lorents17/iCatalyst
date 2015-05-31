@@ -72,6 +72,7 @@ Add folders \ Add files
 
 |Advanced|Xtreme|
 |:-------|:----------|
+|PNG interlace method - None|PNG interlace method - None|
 |![enter image description here](http://s011.radikal.ru/i318/1505/6a/530ea671f0de.png)|![enter image description here](http://i038.radikal.ru/1505/ea/e8d4a4117cce.png)|
 |Размер — 55,57 КБ. Время оптимизации — 1,5 с|Размер — 54,65 КБ. Время оптимизации — 7,5 с|
 |TruePNG + Advdef|TruePNG + PNGWolfZopfli|
