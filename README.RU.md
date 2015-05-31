@@ -75,7 +75,7 @@ Add folders \ Add files
 |![enter image description here](http://s011.radikal.ru/i318/1505/6a/530ea671f0de.png)|![enter image description here](http://i038.radikal.ru/1505/ea/e8d4a4117cce.png)|
 |Размер — 55,57 КБ. Время оптимизации — 1,5 с|Размер — 54,65 КБ. Время оптимизации — 7,5 с|
 |TruePNG + Advdef|TruePNG + PNGWolfZopfli|
-|Степень сжатия в среднем на 10% выше по сравнению с Adobe Photoshop (Save for Web).|Степень сжатия в среднем на 2% выше по сравнению с режимом оптимизации Advanced, скорость сжатия ниже 5 раз|
+|Степень сжатия ~10% выше по сравнению с Adobe Photoshop (Save for Web).|Степень сжатия ~2% выше по сравнению с режимом оптимизации Advanced, скорость сжатия ниже ~5 раз.|
 
 ### Параметры оптимизации JPEG
 
@@ -104,8 +104,12 @@ Add folders \ Add files
 - благодарим участников форумов [encode.ru](http://encode.ru/), [forum.ru-board.com](http://forum.ru-board.com/), [forum.script-coding.com](http://script-coding.com/forum/), [forum.vingrad.ru](http://forum.vingrad.ru/) и [cyberforum.ru](http://www.cyberforum.ru/) за вклад в развитие проекта;
 - отделанная благодарность **X128** за огромный вклад в развитие проекта.
 
+### Альфа-версия проекта
+https://github.com/res2001/iCatalyst
+
+
 ### Лицензия
-Данное программное обеспечение выпускается под лицензией MIT.
+Данное программное обеспечение выпускается под лицензией [MIT](https://github.com/lorents17/iCatalyst/blob/master/LICENSE.RU.md).
 
 ### Планы на будущее
 - добавить поддержку оптимизации изображений SVG;
