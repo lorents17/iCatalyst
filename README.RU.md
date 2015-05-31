@@ -4,7 +4,7 @@
 
 |![enter image description here](http://s013.radikal.ru/i323/1505/b0/bab2109c7ba2.png)|![enter image description here](http://s014.radikal.ru/i326/1505/b8/1629f0f4fc06.png)|![enter image description here](http://s013.radikal.ru/i325/1505/26/80392c71e9c5.png)|
 |:----------|:----------|:----------|
-|**Adobe Photoshop CC 2014** (Save For Web) — 59,78 КБ|**[kraken.io](https://kraken.io/)** — 54,90 КБ|**Image Catalyst** (Xtreme) — 51,39 КБ|
+|**Adobe Photoshop CC 2014** (Save For Web) - 59,78 КБ|**[kraken.io](https://kraken.io/)** - 54,90 КБ|**Image Catalyst** (Xtreme) - 51,39 КБ|
 
 Авторы - [Lorents](https://github.com/lorents17) & [Res2001](https://github.com/res2001)
 
