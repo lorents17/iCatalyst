@@ -72,7 +72,7 @@ Add folders \ Add files
 
 |Advanced|Xtreme|
 |:-------|:----------|
-|![enter image description here](http://hsto.org/files/854/7c8/404/8547c84042c34393a808798a9f0ecfe9.gif)|![enter image description here](http://hsto.org/files/365/aa3/0ef/365aa30ef6044cd48425b1288f5aeff4.gif)|
+|![enter image description here](http://s011.radikal.ru/i318/1505/6a/530ea671f0de.png)|![enter image description here](http://i038.radikal.ru/1505/ea/e8d4a4117cce.png)|
 |Размер — 55,57 КБ. Время оптимизации — 1,5 с|Размер — 54,65 КБ. Время оптимизации — 7,5 с|
 |TruePNG + Advdef|TruePNG + PNGWolfZopfli|
 |Степень сжатия в среднем на 10% выше по сравнению с Adobe Photoshop (Save for Web).|Степень сжатия в среднем на 2% выше по сравнению с режимом оптимизации Advanced, но скорость сжатия ниже 5 раз|
