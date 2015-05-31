@@ -80,7 +80,7 @@ Add folders \ Add files
 |Размер — 55,57 КБ. Время оптимизации — 1,5 с|Размер — 54,65 КБ. Время оптимизации — 7,5 с|
 |PNG interlace method — None|PNG interlace method — None|
 |TruePNG + Advdef|TruePNG + PNGWolfZopfli|
-|Степень сжатия ~ 10% выше по сравнению с Adobe Photoshop CC 2014 (Save for Web).|Степень сжатия ~ 2% выше по сравнению с режимом оптимизации Advanced, скорость сжатия ниже ~ 5 раз.|
+|Степень сжатия на ~ 10% выше по сравнению с Adobe Photoshop CC 2014 (Save for Web).|Степень сжатия на ~ 2% выше по сравнению с режимом оптимизации Advanced, скорость сжатия ниже ~ 5 раз.|
 
 ### Параметры оптимизации JPEG
 
