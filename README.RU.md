@@ -2,6 +2,10 @@
 
 Оптимизация / сжатие изображений PNG, JPEG и GIF без потери качества для Windows.
 
+|![enter image description here](http://s013.radikal.ru/i323/1505/b0/bab2109c7ba2.png)|![enter image description here](http://s014.radikal.ru/i326/1505/b8/1629f0f4fc06.png)|![enter image description here](http://s013.radikal.ru/i325/1505/26/80392c71e9c5.png)|
+|:----------|:----------|:----------|
+|**Adobe Photoshop CC 2014** (Save For Web) — 59,78 КБ|**[kraken.io](https://kraken.io/)** — 54,90 КБ|**Image Catalyst** (Xtreme) — 51,39 КБ|
+
 Авторы - [Lorents](https://github.com/lorents17) & [Res2001](https://github.com/res2001)
 
 ### Используемые инструменты
@@ -74,7 +78,7 @@ Add folders \ Add files
 |:-------|:----------|
 |![enter image description here](http://s011.radikal.ru/i318/1505/6a/530ea671f0de.png)|![enter image description here](http://i038.radikal.ru/1505/ea/e8d4a4117cce.png)|
 |Размер — 55,57 КБ. Время оптимизации — 1,5 с|Размер — 54,65 КБ. Время оптимизации — 7,5 с|
-|PNG interlace method - *None*|PNG interlace method - *None*|
+|PNG interlace method — *None*|PNG interlace method — *None*|
 |**TruePNG** + **Advdef**|**TruePNG** + **PNGWolfZopfli**|
 |Степень сжатия ~ 10% выше по сравнению с Adobe Photoshop CC 2014 (Save for Web).|Степень сжатия ~ 2% выше по сравнению с режимом оптимизации Advanced, скорость сжатия ниже ~ 5 раз.|
 
