@@ -2,7 +2,7 @@
 
 Оптимизация / сжатие изображений PNG, JPEG и GIF без потери качества для Windows.
 
-|![enter image description here](http://s013.radikal.ru/i323/1505/b0/bab2109c7ba2.png)|![enter image description here](http://s014.radikal.ru/i326/1505/b8/1629f0f4fc06.png)|![enter image description here](http://s013.radikal.ru/i325/1505/26/80392c71e9c5.png)|
+|![Adobe Photoshop CC 2014 (Save For Web)](https://cloud.githubusercontent.com/assets/3890881/7943531/b6a6e1c2-096d-11e5-810f-16451c828508.png)|![kraken.io](https://cloud.githubusercontent.com/assets/3890881/7943547/cf4b86c4-096d-11e5-9637-751bf78e0301.png)|![Image Catalyst](https://cloud.githubusercontent.com/assets/3890881/7943571/ef8e18fc-096d-11e5-9933-0a59653f7ea8.png)|
 |:----------|:----------|:----------|
 |Adobe Photoshop CC 2014 (Save For Web) — 59,78 КБ|[kraken.io](https://kraken.io/) — 54,90 КБ|Image Catalyst — 51,39 КБ|
 
