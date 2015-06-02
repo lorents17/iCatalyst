@@ -67,7 +67,7 @@ Add folders \ Add files
 
 ### Drag and Drop
 
-![enter image description here](http://s020.radikal.ru/i703/1505/fb/d9dd0a11fdfa.png)
+![Drag and Drop](https://cloud.githubusercontent.com/assets/3890881/7943598/28496fd4-096e-11e5-8df6-d6415e47caf8.png)
 
 - Перенесите изображения и\или папки с изображениями на значок `iCatalyst.bat`.
 - В полных путях изображений не должны быть символы. Например: `&`, `%`, `(`, `)`, `!` и т.д.
@@ -75,11 +75,11 @@ Add folders \ Add files
 
 ### Параметры оптимизации PNG
 
-![enter image description here](https://hsto.org/files/0fc/f39/4c8/0fcf394c84b848e293ee7cae4ca52d20.png)
+![PNG](https://cloud.githubusercontent.com/assets/3890881/7943611/39d99dd2-096e-11e5-932f-10d5320d10b4.png)
 
 |Advanced|Xtreme|
 |:-------|:----------|
-|![enter image description here](http://s011.radikal.ru/i318/1505/6a/530ea671f0de.png)|![enter image description here](http://i038.radikal.ru/1505/ea/e8d4a4117cce.png)|
+|![Advanced](https://cloud.githubusercontent.com/assets/3890881/7943621/4c41f73a-096e-11e5-8cca-1c12018a7940.png)|![Xtreme](https://cloud.githubusercontent.com/assets/3890881/7943637/6c37201a-096e-11e5-92ca-855f69ed95ef.png)|
 |Размер — 55,57 КБ. Время оптимизации — 1,5 с|Размер — 54,65 КБ. Время оптимизации — 7,5 с|
 |PNG interlace method — None|PNG interlace method — None|
 |TruePNG + Advdef|TruePNG + PNGWolfZopfli|
@@ -87,18 +87,18 @@ Add folders \ Add files
 
 ### Параметры оптимизации JPEG
 
-![enter image description here](https://hsto.org/files/8d0/0de/ed3/8d00deed3ba848d38d87f0f29e518bc8.png)
+![JPEG](https://cloud.githubusercontent.com/assets/3890881/7943652/873d3c5a-096e-11e5-8050-af54582f5c5b.png)
 
 |Baseline|Progressive|
 |:-------|:----------|
-|![enter image description here](http://hsto.org/files/854/7c8/404/8547c84042c34393a808798a9f0ecfe9.gif)|![enter image description here](http://hsto.org/files/365/aa3/0ef/365aa30ef6044cd48425b1288f5aeff4.gif)|
+|![Baseline](https://cloud.githubusercontent.com/assets/3890881/7943666/9c3c1324-096e-11e5-8cf1-bceade0ebd85.gif)|![Progressive](https://cloud.githubusercontent.com/assets/3890881/7943679/ace1271e-096e-11e5-9ca4-6f33f421ca52.gif)|
 |Последовательное (линейное) отображение изображения по мере поступления данных при загрузке.|Поочередно все более детализированные версии целого изображения по мере поступления данных при загрузке.|
 
 - *Default* - использует параметры оптимизации по умолчанию.
 
 ### Параметры оптимизации GIF
 
-![enter image description here](https://hsto.org/files/594/5ec/99e/5945ec99e5ca4ad8a21de1d9315f0531.png)
+![GIF](https://cloud.githubusercontent.com/assets/3890881/7943690/c73a84ac-096e-11e5-8920-a088a8a0ee60.png)
 
 - *Default* - использует параметры оптимизации по умолчанию.
 
