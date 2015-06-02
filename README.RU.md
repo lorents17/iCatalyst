@@ -75,7 +75,7 @@ Add folders \ Add files
 
 ### Параметры оптимизации PNG
 
-![https://hsto.org/files/0fc/f39/4c8/0fcf394c84b848e293ee7cae4ca52d20.png](https://hsto.org/files/0fc/f39/4c8/0fcf394c84b848e293ee7cae4ca52d20.png)
+![enter image description here](https://hsto.org/files/0fc/f39/4c8/0fcf394c84b848e293ee7cae4ca52d20.png)
 
 |Advanced|Xtreme|
 |:-------|:----------|
