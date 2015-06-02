@@ -79,7 +79,7 @@ Add folders \ Add files
 
 |Advanced|Xtreme|
 |:-------|:----------|
-|![Advanced](https://cloud.githubusercontent.com/assets/3890881/7943621/4c41f73a-096e-11e5-8cca-1c12018a7940.png)|![Xtreme](https://cloud.githubusercontent.com/assets/3890881/7943637/6c37201a-096e-11e5-92ca-855f69ed95ef.png)|
+|![Advanced](https://cloud.githubusercontent.com/assets/3890881/7943713/f816fd26-096e-11e5-8a8d-036e9fd443bf.png)|![Xtreme](https://cloud.githubusercontent.com/assets/3890881/7943637/6c37201a-096e-11e5-92ca-855f69ed95ef.png)|
 |Размер — 55,57 КБ. Время оптимизации — 1,5 с|Размер — 54,65 КБ. Время оптимизации — 7,5 с|
 |PNG interlace method — None|PNG interlace method — None|
 |TruePNG + Advdef|TruePNG + PNGWolfZopfli|
