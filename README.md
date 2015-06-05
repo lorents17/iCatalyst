@@ -60,7 +60,7 @@ Options:
 		For example: "/outdir:C:\temp", if there's no such dir exists, it will be created automatically.
 
 Add folders \ Add files
-- Specify full path pointing to images or dirs with images. For example: `"C:\Images" "C:\Photos" "C:\logo.png"`.
+- Specify full path pointing to images or dirs with images. For example: `"C:\Images" "C:\logo.png"`.
 - You can't use symbols such as `&`, `%`, `(`, `)`, `!` etc. in paths.
 - App handles images in directories recursively.
 ```
