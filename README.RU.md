@@ -6,7 +6,7 @@
 |:----------|:----------|:----------|
 |Adobe Photoshop CC 2014 (Save For Web) — 59,78 КБ|[kraken.io](https://kraken.io/) — 54,90 КБ|Image Catalyst — 51,39 КБ|
 
-Авторы - [Lorents](https://github.com/lorents17) & [Res2001](https://github.com/res2001)
+##### Авторы - [Lorents](https://github.com/lorents17) & [Res2001](https://github.com/res2001)
 
 ### Инструменты
 
