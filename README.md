@@ -4,31 +4,31 @@ Loseless PNG, JPEG and GIF optimization / compression tool for Windows.
 
 Created by Lorents & Res2001.
 
-## Tools used
+### Tools
 
-### PNG optimization
-- AdvDef (AdvanceComp 1.20 beta);
-- DeflOpt 2.07;
-- Defluff 0.3.2;
-- PNGWolfZopfli, 06.05.2015;
-- TruePNG 0.5.0.4.
+##### PNG:
+- AdvDef ([AdvanceComp](http://advancemame.sourceforge.net/doc-advdef.html) 1.20 beta)
+- DeflOpt 2.07
+- [Defluff](http://encode.ru/threads/1214-defluff-a-deflate-huffman-optimizer) 0.3.2
+- [PNGWolfZopfli](https://github.com/jibsen/pngwolf-zopfli) 1.0.0
+- [TruePNG](http://x128.ho.ua/pngutils.html) 0.5.0.4
 
-### JPEG optimization
-- JPEGinfo, 16.03.2014;
-- JPEGstripper, 16.03.2014;
-- MozJPEGTran (MozJPEG 3.1).
+##### JPEG:
+- [JPEGinfo](http://rtfreesoft.blogspot.ru/2014/03/jpginfo.html) от 16.03.2014
+- [JPEGstripper](http://rtfreesoft.blogspot.ru/2014/03/jpegstripper.html) от 16.03.2014
+- MozJPEGTran ([MozJPEG](https://github.com/mozilla/mozjpeg) 3.1)
 
-### GIF optimization
-- GIFSicle 1.87.
+##### GIF:
+- [GIFSicle](http://www.lcdf.org/gifsicle/) 1.87
 
-## Additional software
-- DlgMsgBox, 29.02.2012.
+##### Additional software:
+- DlgMsgBox, 29.02.2012
 
-## Requirements
+### Requirements
 
 Works starting from Windows XP SP3 32-bit.
 
-## Command line options
+### Command line options
 
 ```
 iCatalyst.bat [options] [add folders \ add files]
@@ -76,23 +76,24 @@ Add folders \ Add files
 - Progressive - image will be [loaded progressively ](http://habrastorage.org/files/365/aa3/0ef/365aa30ef6044cd48425b1288f5aeff4.gif).
 - Default - uses defaults.
 
-## Tricks
-
+### Additionally
 - In order to pause optimization in the command line window press right mouse button and "select all". Press right mouse button again to resume.
 - You can adjust settings in Tools\config.ini.
 - By default multitheaded mode is used so it's not recommended to launch more than a single optimization process since it will be extremely slow. Multi-threaded mode can be turned off in `Tools\config.ini`.
 
 ## Thanks
-
 - Original tools authors.
-- Member of encode.ru, forum.ru-board.com, forum.script-coding.com, forum.vingrad.ru and cyberforum.ru for their participation in the project;
+- Member of [encode.ru](http://encode.ru/), [forum.ru-board.com](http://forum.ru-board.com/), [forum.script-coding.com](http://script-coding.com/forum/), [forum.vingrad.ru](http://forum.vingrad.ru/) и [cyberforum.ru](http://www.cyberforum.ru/) for their participation in the project;
 - X128 for exceptional contributions.
 
-## License
+###Alpha version of the project
+https://github.com/res2001/iCatalyst
 
-MIT.
+### License
 
-## Roadmap
+This software is released under the terms of the [MIT license](https://github.com/lorents17/iCatalyst/blob/master/LICENSE.md).
 
+
+### Future plans
 - SVG;
 - Lossy PNG and JPEG.
