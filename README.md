@@ -67,18 +67,30 @@ Add folders \ Add files
 
 ### Drag and Drop
 
+![Drag and Drop](https://cloud.githubusercontent.com/assets/3890881/7943598/28496fd4-096e-11e5-8df6-d6415e47caf8.png)
+
 - Drop images and directories on `iCatalyst.bat` icon.
 - There should not be symbols such as `&`, `%`, `(`, `)`, `!` etc. in paths.
 - App handles images in directories recursively.
 
 ### PNG optimization settings
+
+![PNG](https://cloud.githubusercontent.com/assets/3890881/7943611/39d99dd2-096e-11e5-932f-10d5320d10b4.png)
+
 - Advanced - uses basic tools. Compression is usually better than Photoshop (Save for Web) by 10%;
 - Xtreme - uses advanced tools. Usually better than Advanced mode by 2% but 5 times slower.
 
 ### JPEG optimization settings
+
+![JPEG](https://cloud.githubusercontent.com/assets/3890881/7943652/873d3c5a-096e-11e5-8050-af54582f5c5b.png)
+
 - Baseline - image will be [displayed line by line when loading](http://habrastorage.org/files/854/7c8/404/8547c84042c34393a808798a9f0ecfe9.gif).
 - Progressive - image will be [loaded progressively ](http://habrastorage.org/files/365/aa3/0ef/365aa30ef6044cd48425b1288f5aeff4.gif).
 - Default - uses defaults.
+
+### GIF optimization settings
+
+![GIF](https://cloud.githubusercontent.com/assets/3890881/7943690/c73a84ac-096e-11e5-8920-a088a8a0ee60.png)
 
 ### Additionally
 - In order to pause optimization in the command line window press right mouse button and "select all". Press right mouse button again to resume.
