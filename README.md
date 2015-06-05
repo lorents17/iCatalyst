@@ -6,7 +6,7 @@ Loseless PNG, JPEG and GIF optimization / compression tool for Windows.
 |:----------|:----------|:----------|
 |Adobe Photoshop CC 2014 (Save For Web) — 59,78 КБ|[kraken.io](https://kraken.io/) — 54,90 КБ|Image Catalyst — 51,39 КБ|
 
-Created by  [Lorents](https://github.com/lorents17) & [Res2001](https://github.com/res2001)
+##### Created by [Lorents](https://github.com/lorents17) & [Res2001](https://github.com/res2001)
 
 ### Tools
 
