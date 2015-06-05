@@ -111,5 +111,5 @@ This software is released under the terms of the [MIT license](https://github.co
 
 
 ### Future plans
-- SVG;
-- Lossy PNG and JPEG.
+- SVG
+- Lossy PNG and JPEG
