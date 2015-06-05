@@ -112,9 +112,8 @@ Add folders \ Add files
 - благодарим участников форумов [encode.ru](http://encode.ru/), [forum.ru-board.com](http://forum.ru-board.com/), [forum.script-coding.com](http://script-coding.com/forum/), [forum.vingrad.ru](http://forum.vingrad.ru/) и [cyberforum.ru](http://www.cyberforum.ru/) за вклад в развитие проекта;
 - отделанная благодарность **X128** за огромный вклад в развитие проекта.
 
-### Альфа-версия проекта
+### Альфа-версия
 https://github.com/res2001/iCatalyst
-
 
 ### Лицензия
 Данное программное обеспечение выпускается под лицензией [MIT](https://github.com/lorents17/iCatalyst/blob/master/LICENSE.RU.md).
