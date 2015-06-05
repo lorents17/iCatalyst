@@ -860,7 +860,7 @@ title [Manual] %name% %version%
 1>&2 echo  Add folders \ Add files:
 1>&2 echo  - Specify the full path to the images and / or folders with images.
 1>&2 echo    For example: "C:\Images" "C:\Photos" "C:\logo.png"
-1>&2 echo  - In the full image paths should not be characters. 
+1>&2 echo  - The full paths of images should not be special characters. 
 1>&2 echo    For example: "&", "%%", "(", ")" etc.
 1>&2 echo  - The application automatically optimizes images in nested subfolders.
 1>&2 echo -------------------------------------------------------------------------------
