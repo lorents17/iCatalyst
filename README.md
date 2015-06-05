@@ -102,7 +102,7 @@ Add folders \ Add files
 - Member of [encode.ru](http://encode.ru/), [forum.ru-board.com](http://forum.ru-board.com/), [forum.script-coding.com](http://script-coding.com/forum/), [forum.vingrad.ru](http://forum.vingrad.ru/) и [cyberforum.ru](http://www.cyberforum.ru/) for their participation in the project;
 - X128 for exceptional contributions.
 
-###Alpha version of the project
+### Alpha version
 https://github.com/res2001/iCatalyst
 
 ### License
