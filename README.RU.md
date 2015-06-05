@@ -8,7 +8,7 @@
 
 Авторы - [Lorents](https://github.com/lorents17) & [Res2001](https://github.com/res2001)
 
-### Инструменты оптимизации / сжатия
+### Инструменты
 
 ##### PNG:
 - AdvDef ([AdvanceComp](http://advancemame.sourceforge.net/doc-advdef.html) 1.20 beta)
