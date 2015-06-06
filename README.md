@@ -2,7 +2,7 @@
 
 Loseless PNG, JPEG and GIF optimization / compression tool for Windows.
 
-|![Adobe Photoshop](http://s019.radikal.ru/i600/1506/b9/f7d84d9c0c2c.png)|![Image Catalyst](https://cloud.githubusercontent.com/assets/3890881/7943571/ef8e18fc-096d-11e5-9933-0a59653f7ea8.png)|
+|![Adobe Photoshop](http://s020.radikal.ru/i714/1506/a5/ef8626fcbe4a.png)|![Image Catalyst](https://cloud.githubusercontent.com/assets/3890881/7943571/ef8e18fc-096d-11e5-9933-0a59653f7ea8.png)|
 |:----------|:----------|
 |Adobe Photoshop CC 2014 (Save For Web) — 59,78 КБ|Image Catalyst — 51,39 КБ|
 
