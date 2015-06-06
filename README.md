@@ -113,5 +113,5 @@ This software is released under the terms of the [MIT license](https://github.co
 
 
 ### Future plans
-- SVG
-- Lossy PNG and JPEG
+- add support for optimizing SVG;
+- add support to optimize PNG and JPEG lossy.
