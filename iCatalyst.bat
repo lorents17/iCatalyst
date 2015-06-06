@@ -838,17 +838,17 @@ title [Manual] %name% %version%
 1>&2 echo  /png:#	Optimization settings PNG:
 1>&2 echo 	1 - Compression level - Xtreme
 1>&2 echo 	2 - Compression level - Advanced
-1>&2 echo 	0 - Skip PNG optimization (default)
+1>&2 echo 	0 - Skip (default)
 1>&2 echo.
 1>&2 echo  /jpg:#	Optimization settings JPEG:
 1>&2 echo 	1 - Encoding Process - Baseline
 1>&2 echo 	2 - Encoding Process - Progressive
 1>&2 echo 	3 - Optimization settings default
-1>&2 echo 	0 - Skip JPEG optimization (default)
+1>&2 echo 	0 - Skip (default)
 1>&2 echo.
 1>&2 echo  /gif:#	Optimization settings GIF:
 1>&2 echo 	1 - Optimization settings default
-1>&2 echo 	0 - Skip GIF optimization (default)
+1>&2 echo 	0 - Skip (default)
 1>&2 echo.
 1>&2 echo  "/outdir:#" Settings save optimized images:
 1>&2 echo 	true  - replace the original image on optimized
@@ -859,7 +859,7 @@ title [Manual] %name% %version%
 1>&2 echo.
 1>&2 echo  Add folders \ Add files:
 1>&2 echo  - Specify the full path to the images and / or folders with images.
-1>&2 echo    For example: "C:\Images" "C:\Photos" "C:\logo.png"
+1>&2 echo    For example: "C:\Images" "C:\logo.png"
 1>&2 echo  - The full paths of images should not be special characters. 
 1>&2 echo    For example: "&", "%%", "(", ")" etc.
 1>&2 echo  - The application automatically optimizes images in nested subfolders.
