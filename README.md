@@ -64,7 +64,7 @@ Add folders \ Add files:
 - Specify the full path to the images and / or folders with images. 
   For example: "C:\Images" "C:\logo.png"
 - The full paths of images should not be special characters. For example: &, %, (, ) etc.
-- The application automatically optimizes images in nested subfolders.
+- The application optimizes images in nested subfolders.
 ```
 
 ### Drag and Drop
