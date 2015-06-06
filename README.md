@@ -26,7 +26,7 @@ Loseless PNG, JPEG and GIF optimization / compression tool for Windows.
 - [GIFSicle](http://www.lcdf.org/gifsicle/) 1.87
 
 ##### Additional software:
-- DlgMsgBox, 29.02.2012
+- DlgMsgBox 29.02.2012
 
 ### Requirements
 
