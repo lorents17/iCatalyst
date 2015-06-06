@@ -56,8 +56,9 @@ Options:
 "/outdir:#	Settings save optimized images:
 		true  - replace the original image on optimized
 		false - open dialog box for saving images (default)
-		"full path to folder - specify the folder to save images. For example: "/outdir:C:\temp",
-		if the destination folder does not exist, it will be created automatically.
+		"full path to folder - specify the folder to save images. 
+		For example: "/outdir:C:\temp", if the destination folder does not exist,
+		it will be created automatically.
 
 Add folders \ Add files:
 - Specify the full path to the images and / or folders with images. 
