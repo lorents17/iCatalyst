@@ -2,9 +2,9 @@
 
 Loseless PNG, JPEG and GIF optimization / compression tool for Windows.
 
-|![Adobe Photoshop CC 2014 (Save For Web)](https://cloud.githubusercontent.com/assets/3890881/7943531/b6a6e1c2-096d-11e5-810f-16451c828508.png)|![kraken.io](https://cloud.githubusercontent.com/assets/3890881/7943547/cf4b86c4-096d-11e5-9637-751bf78e0301.png)|![Image Catalyst](https://cloud.githubusercontent.com/assets/3890881/7943571/ef8e18fc-096d-11e5-9933-0a59653f7ea8.png)|
-|:----------|:----------|:----------|
-|Adobe Photoshop CC 2014 (Save For Web) — 59,78 КБ|[kraken.io](https://kraken.io/) — 54,90 КБ|Image Catalyst — 51,39 КБ|
+|![Adobe Photoshop](https://cloud.githubusercontent.com/assets/3890881/7943531/b6a6e1c2-096d-11e5-810f-16451c828508.png)|[Image Catalyst](https://cloud.githubusercontent.com/assets/3890881/7943571/ef8e18fc-096d-11e5-9933-0a59653f7ea8.png)|
+|:----------|:----------|
+|Adobe Photoshop CC 2014 (Save For Web) — 59,78 КБ|Image Catalyst — 51,39 КБ|
 
 ##### Created by [Lorents](https://github.com/lorents17) & [Res2001](https://github.com/res2001)
 
@@ -38,31 +38,31 @@ Works starting from Windows XP SP3 32-bit.
 iCatalyst.bat [options] [add folders \ add files]
 
 Options:
-/png:#	PNG optimization options:
-	1 - Compression level - Xtreme;
-	2 - Compression level - Advanced;
-	0 - skip PNG optimization.
+/png:#	Optimization settings PNG:
+		1 - Compression level - Xtreme
+		2 - Compression level - Advanced
+		0 - Skip (default)
 
-/jpg:#	JPEG optimization options:
-	1 - Encoding Process - Baseline;
-	2 - Encoding Process - Progressive;
-	3 - defaults;
-	0 - skip JPEG optimization.
+/jpg:#	Optimization settings JPEG:
+		1 - Encoding Process - Baseline
+		2 - Encoding Process - Progressive
+		3 - Optimization settings default
+		0 - Skip (default)
 
-/gif:#	GIF optimization options:
-		1 - defaults:
-		0 - skip GIF optimization.
+/gif:#	Optimization settings GIF:
+		1 - Optimization settings default
+		0 - Skip (default)
 
-"/outdir:#"	image saving options:
-		true  - replace originals;
-		false - open dialogue to specify where to save images;
-		"full path" - where to save images.
-		For example: "/outdir:C:\temp", if there's no such dir exists, it will be created automatically.
+"/outdir:#	Settings save optimized images:
+		true  - replace the original image on optimized
+		false - open dialog box for saving images (default)
+		"full path to folder - specify the folder to save images. For example: "/outdir:C:\temp",
+		if the destination folder does not exist, it will be created automatically.
 
-Add folders \ Add files
-- Specify full path pointing to images or dirs with images. For example: `"C:\Images" "C:\logo.png"`.
-- You can't use symbols such as `&`, `%`, `(`, `)`, `!` etc. in paths.
-- App handles images in directories recursively.
+Add folders \ Add files:
+- Specify the full path to the images and / or folders with images. For example: "C:\Images" "C:\logo.png"
+- The full paths of images should not be special characters. For example: &, %, (, ) etc.
+- The application automatically optimizes images in nested subfolders.
 ```
 
 ### Drag and Drop
