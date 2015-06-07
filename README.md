@@ -97,14 +97,14 @@ Add folders \ Add files:
 |![Baseline](https://cloud.githubusercontent.com/assets/3890881/7943666/9c3c1324-096e-11e5-8cf1-bceade0ebd85.gif)|![Progressive](https://cloud.githubusercontent.com/assets/3890881/7943679/ace1271e-096e-11e5-9ca4-6f33f421ca52.gif)|
 |For image < 10 KB, it is recommended to use — `Baseline` ([read more](http://yuiblog.com/blog/2008/12/05/imageopt-4/))|For image > 10 KB, it is recommended to use — `Progressive` ([read more](http://yuiblog.com/blog/2008/12/05/imageopt-4/))|
 
-- `Default` — uses the optimization settings by default;
+- `Default` — use the optimization settings by default;
 - `Skip` — skip the optimization of images JPEG.
 
 ### GIF optimization settings
 
 ![GIF](https://cloud.githubusercontent.com/assets/3890881/7943690/c73a84ac-096e-11e5-8920-a088a8a0ee60.png)
 
-- `Default` — uses the optimization settings by default;
+- `Default` — use the optimization settings by default;
 - `Skip` — skip the optimization of images GIF.
 
 ### Additionally
