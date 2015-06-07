@@ -108,7 +108,7 @@ Add folders \ Add files
 ### Благодарности
 - благодарим авторов приложений, которые используются в проекте;
 - благодарим участников форумов [encode.ru](http://encode.ru/), [forum.ru-board.com](http://forum.ru-board.com/), [forum.script-coding.com](http://script-coding.com/forum/), [forum.vingrad.ru](http://forum.vingrad.ru/) и [cyberforum.ru](http://www.cyberforum.ru/) за вклад в развитие проекта;
-- отделанная благодарность **X128** за огромный вклад в развитие проекта.
+- отдельно благодарим **X128** за огромный вклад в развитие проекта.
 
 ### Альфа-версия
 https://github.com/res2001/iCatalyst
