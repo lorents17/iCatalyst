@@ -2,7 +2,7 @@
 
 Оптимизация / сжатие изображений PNG, JPEG и GIF без потери качества для Windows.
 
-|![Adobe Photoshop](http://s020.radikal.ru/i714/1506/a5/ef8626fcbe4a.png)|![Image Catalyst](https://cloud.githubusercontent.com/assets/3890881/7943571/ef8e18fc-096d-11e5-9933-0a59653f7ea8.png)|
+|![Adobe Photoshop](https://cloud.githubusercontent.com/assets/3890881/8023708/091611e8-0d20-11e5-8b0b-b0fcc62df307.png)|![Image Catalyst](https://cloud.githubusercontent.com/assets/3890881/7943571/ef8e18fc-096d-11e5-9933-0a59653f7ea8.png)|
 |:----------|:----------|
 |Adobe Photoshop CC 2014 (Save For Web) — 59,78 КБ|Image Catalyst — 51,39 КБ|
 
@@ -92,7 +92,6 @@ Add folders \ Add files
 |Baseline|Progressive|
 |:-------|:----------|
 |![Baseline](https://cloud.githubusercontent.com/assets/3890881/7943666/9c3c1324-096e-11e5-8cf1-bceade0ebd85.gif)|![Progressive](https://cloud.githubusercontent.com/assets/3890881/7943679/ace1271e-096e-11e5-9ca4-6f33f421ca52.gif)|
-|Последовательное (линейное) отображение изображения по мере поступления данных при загрузке.|Поочередно все более детализированные версии целого изображения по мере поступления данных при загрузке.|
 
 - *Default* — использует параметры оптимизации по умолчанию.
 
