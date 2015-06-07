@@ -103,14 +103,14 @@ Add folders \ Add files:
 - *Default* — uses the optimization settings by default.
 
 ### Additionally
-- In order to pause optimization in the command line window press right mouse button and "select all". Press right mouse button again to resume.
-- You can adjust settings in Tools\config.ini.
-- By default multitheaded mode is used so it's not recommended to launch more than a single optimization process since it will be extremely slow. Multi-threaded mode can be turned off in `Tools\config.ini`.
+- To deliver optimized images on pause. To do this in the command prompt window app click on the right mouse button and select "Select all", to continue optimizing the image in the window command line application click on the right mouse button.
+- Change the settings of the application. Open the file `Tools\config.ini` with any text editor and follow the instructions.
+- Multithreaded optimizing images. By default, when optimizing the images the app uses multi-threaded mode. It is not recommended to run in parallel more than one copy of the application, as this will significantly reduce the speed of image optimization and performance of the whole system. To disable multi-threading mode, open the file `Tools\config.ini` with any text editor and follow the instructions.
 
 ## Thanks
-- Original tools authors.
-- Member of [encode.ru](http://encode.ru/), [forum.ru-board.com](http://forum.ru-board.com/), [forum.script-coding.com](http://script-coding.com/forum/), [forum.vingrad.ru](http://forum.vingrad.ru/) и [cyberforum.ru](http://www.cyberforum.ru/) for their participation in the project;
-- X128 for exceptional contributions.
+- Thanks the authors of the applications that are used in the project;
+- Thanks the participants of the forums [encode.ru](http://encode.ru/), [forum.ru-board.com](http://forum.ru-board.com/), [forum.script-coding.com](http://script-coding.com/forum/), [forum.vingrad.ru](http://forum.vingrad.ru/) и [cyberforum.ru](http://www.cyberforum.ru/) for contribution to the development of the project;
+- Thanks **X128** for his huge contribution to the development of the project.
 
 ### Alpha version
 https://github.com/res2001/iCatalyst
