@@ -78,20 +78,30 @@ Add folders \ Add files:
 
 ![PNG](https://cloud.githubusercontent.com/assets/3890881/7943611/39d99dd2-096e-11e5-932f-10d5320d10b4.png)
 
-- Advanced - uses basic tools. Compression is usually better than Photoshop (Save for Web) by 10%;
-- Xtreme - uses advanced tools. Usually better than Advanced mode by 2% but 5 times slower.
+|Advanced|Xtreme|
+|:-------|:----------|
+|![Advanced](https://cloud.githubusercontent.com/assets/3890881/7943713/f816fd26-096e-11e5-8a8d-036e9fd443bf.png)|![Xtreme](https://cloud.githubusercontent.com/assets/3890881/7943637/6c37201a-096e-11e5-92ca-855f69ed95ef.png)|
+|Size — 55,57 KB. Время оптимизации — 1,5 s|Размер — 54,65 KB. Время оптимизации — 7,5 s|
+|PNG interlace method — None|PNG interlace method — None|
+|TruePNG + Advdef|TruePNG + PNGWolfZopfli|
+|The compression ratio is ~ 10% higher compared to Adobe Photoshop CC 2014 (Save for Web).| 	
+The compression ratio is ~ 2% higher compared to Advanced optimization modes, compression speed below ~ 5 times.|
 
 ### JPEG optimization settings
 
 ![JPEG](https://cloud.githubusercontent.com/assets/3890881/7943652/873d3c5a-096e-11e5-8050-af54582f5c5b.png)
 
-- Baseline - image will be [displayed line by line when loading](http://habrastorage.org/files/854/7c8/404/8547c84042c34393a808798a9f0ecfe9.gif).
-- Progressive - image will be [loaded progressively ](http://habrastorage.org/files/365/aa3/0ef/365aa30ef6044cd48425b1288f5aeff4.gif).
-- Default - uses defaults.
+|Baseline|Progressive|
+|:-------|:----------|
+|![Baseline](https://cloud.githubusercontent.com/assets/3890881/7943666/9c3c1324-096e-11e5-8cf1-bceade0ebd85.gif)|![Progressive](https://cloud.githubusercontent.com/assets/3890881/7943679/ace1271e-096e-11e5-9ca4-6f33f421ca52.gif)|
+
+- *Default* — uses the optimization settings by default.
 
 ### GIF optimization settings
 
 ![GIF](https://cloud.githubusercontent.com/assets/3890881/7943690/c73a84ac-096e-11e5-8920-a088a8a0ee60.png)
+
+- *Default* — uses the optimization settings by default.
 
 ### Additionally
 - In order to pause optimization in the command line window press right mouse button and "select all". Press right mouse button again to resume.
