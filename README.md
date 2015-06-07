@@ -107,7 +107,7 @@ Add folders \ Add files:
 - Change the settings of the application. Open the file `Tools\config.ini` with any text editor and follow the instructions.
 - Multithreaded optimizing images. By default, when optimizing the images the app uses multi-threaded mode. It is not recommended to run in parallel more than one copy of the application, as this will significantly reduce the speed of image optimization and performance of the whole system. To disable multi-threading mode, open the file `Tools\config.ini` with any text editor and follow the instructions.
 
-## Thanks
+### Thanks
 - Thanks the authors of the applications that are used in the project;
 - Thanks the participants of the forums [encode.ru](http://encode.ru/), [forum.ru-board.com](http://forum.ru-board.com/), [forum.script-coding.com](http://script-coding.com/forum/), [forum.vingrad.ru](http://forum.vingrad.ru/) и [cyberforum.ru](http://www.cyberforum.ru/) for contribution to the development of the project;
 - Thanks **X128** for his huge contribution to the development of the project.
