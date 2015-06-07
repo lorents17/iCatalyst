@@ -71,9 +71,8 @@ Add folders \ Add files:
 
 ![Drag and Drop](https://cloud.githubusercontent.com/assets/3890881/7943598/28496fd4-096e-11e5-8df6-d6415e47caf8.png)
 
-- Drop images and directories on `iCatalyst.bat` icon.
-- There should not be symbols such as `&`, `%`, `(`, `)`, `!` etc. in paths.
-- App handles images in directories recursively.
+- The full paths of images should not be special characters. For example: '&', '%', '(', ')' etc.
+- The application optimizes images in nested subfolders.
 
 ### PNG optimization settings
 
