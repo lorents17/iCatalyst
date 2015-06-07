@@ -63,7 +63,7 @@ Options:
 Add folders \ Add files:
 - Specify the full path to the images and / or folders with images. 
   For example: "C:\Images" "C:\logo.png"
-- The full paths of images should not be special characters. For example: !, %, (, ) etc.
+- The full paths of images should not be special characters. For example: &, %, (, ) etc.
 - The application optimizes images in nested subfolders.
 ```
 
@@ -71,7 +71,7 @@ Add folders \ Add files:
 
 ![Drag and Drop](https://cloud.githubusercontent.com/assets/3890881/7943598/28496fd4-096e-11e5-8df6-d6415e47caf8.png)
 
-- The full paths of images should not be special characters. For example: '`&`, `%`, `(`, `)`, `!` etc.
+- The full paths of images should not be special characters. For example: `&`, `%`, `(`, `)`, `!` etc.
 - The application optimizes images in nested subfolders.
 
 ### PNG optimization settings
