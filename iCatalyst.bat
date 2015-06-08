@@ -287,7 +287,7 @@ for /l %%z in (1,1,%2) do (
 	if not exist "%tmppath%\thrt%%z.lck" (
 		call:typelog %1 %%z
 		>"%tmppath%\thrt%%z.lck" echo Image processing: %3
-		start /b /LOW /MIN /NODE 0 cmd.exe /s /c ""%fullname%" thrd "%~3" "%~4" %1 %%z"
+		start /b /LOW /MIN cmd.exe /s /c ""%fullname%" thrd "%~3" "%~4" %1 %%z"
 		exit /b
 	)
 )
