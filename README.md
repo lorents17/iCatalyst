@@ -30,7 +30,7 @@ Loseless PNG, JPEG and GIF optimization / compression tool for Windows.
 
 ### Requirements
 
-Operating system — Windows XP SP3 32-bit and higher.
+Operating system — Windows XP SP3 and higher.
 
 ### Command line options
 
