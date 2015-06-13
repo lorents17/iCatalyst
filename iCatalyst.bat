@@ -185,6 +185,7 @@ for /l %%a in (1,1,%thread%) do (
 )
 cls
 echo -------------------------------------------------------------------------------
+echo.
 if /i "%updatecheck%" equ "true" start "" /b cmd.exe /c ""%fullname%" updateic"
 call:setitle
 call:setvtime stime
