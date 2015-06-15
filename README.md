@@ -28,7 +28,7 @@ Loseless PNG, JPEG and GIF optimization / compression tool for Windows.
 ##### Additional software:
 - DlgMsgBox 29.02.2012
 
-### Requirements
+### System requirements
 
 Operating system — Windows XP SP3 and higher.
 
