@@ -32,10 +32,10 @@
 
 Операционная система — Windows XP SP3 и выше.
 
-### Параметры командной строки
+### Параметры командной строки (cmd.exe)
 
 ```
-iCatalyst.bat [options] [add folders \ add files]
+call iCatalyst.bat [options] [add folders \ add files]
 
 Options:
 /png:#	Параметры оптимизации PNG:
@@ -63,6 +63,10 @@ Add folders \ Add files
 - Укажите полный путь к изображениям и\или к папкам с изображениями. Например: "C:\Images" "C:\logo.png".
 - В полных путях изображений не должно быть специальных символов. Например: &, %, (, ), ! и т.д.
 - Приложение оптимизирует изображения во вложенных подпапках.
+
+Примеры: 
+call iCatalyst.bat /gif:2 "/outdir:C:\photos" "C:\images"
+call iCatalyst.bat /png:2 /jpg:2 "/outdir:true" "C:\images"
 ```
 
 ### Drag and Drop
