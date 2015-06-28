@@ -833,7 +833,7 @@ title [Manual] %name% %version%
 1>&2 echo.
 1>&2 echo  Recommended to examine ReadMe
 1>&2 echo.
-1>&2 echo  iCatalyst.bat [options] [add folders \ add files]
+1>&2 echo  call iCatalyst.bat [options] [add folders \ add files]
 1>&2 echo.
 1>&2 echo  Options:
 1>&2 echo  /png:#	Optimization settings PNG:
@@ -864,6 +864,10 @@ title [Manual] %name% %version%
 1>&2 echo  - The full paths of images should not be special characters. 
 1>&2 echo    For example: "&", "%%", "(", ")" etc.
 1>&2 echo  - The application optimizes images in nested subfolders.
+1>&2 echo.
+1>&2 echo  Examples:
+1>&2 echo  call iCatalyst.bat /gif:1 "/outdir:C:\photos" "C:\images"
+1>&2 echo  call iCatalyst.bat /png:2 /jpg:2 "/outdir:true" "C:\images"
 1>&2 echo -------------------------------------------------------------------------------
 if exist "%tmppath%" 1>nul 2>&1 rd /s /q "%tmppath%"
 call:dopause & exit /b
