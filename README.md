@@ -32,10 +32,10 @@ Loseless PNG, JPEG and GIF optimization / compression tool for Windows.
 
 Operating system — Windows XP SP3 and higher.
 
-### Command line options
+### Command line options (cmd.exe)
 
 ```
-iCatalyst.bat [options] [add folders \ add files]
+call iCatalyst.bat [options] [add folders \ add files]
 
 Options:
 /png:#	Optimization settings PNG:
@@ -66,6 +66,10 @@ Add folders \ Add files:
 - The full paths of images should not be special characters.
   For example: &, %, (, ) etc.
 - The application optimizes images in nested subfolders.
+
+Examples:
+call iCatalyst.bat /gif:2 "/outdir:C:\photos" "C:\images"
+call iCatalyst.bat /png:2 /jpg:2 "/outdir:true" "C:\images"
 ```
 
 ### Drag and Drop
