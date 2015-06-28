@@ -68,7 +68,7 @@ Add folders \ Add files:
 - The application optimizes images in nested subfolders.
 
 Examples:
-call iCatalyst.bat /gif:2 "/outdir:C:\photos" "C:\images"
+call iCatalyst.bat /gif:1 "/outdir:C:\photos" "C:\images"
 call iCatalyst.bat /png:2 /jpg:2 "/outdir:true" "C:\images"
 ```
 
