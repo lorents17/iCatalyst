@@ -65,7 +65,7 @@ Add folders \ Add files
 - Приложение оптимизирует изображения во вложенных подпапках.
 
 Примеры: 
-call iCatalyst.bat /gif:2 "/outdir:C:\photos" "C:\images"
+call iCatalyst.bat /gif:1 "/outdir:C:\photos" "C:\images"
 call iCatalyst.bat /png:2 /jpg:2 "/outdir:true" "C:\images"
 ```
 
