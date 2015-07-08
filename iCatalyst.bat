@@ -836,7 +836,7 @@ title [Manual] %name% %version%
 1>&2 echo  call iCatalyst.bat [options] [add folders \ add files]
 1>&2 echo.
 1>&2 echo  Options:
-1>&2 echo  /png:#	Optimization settings PNG:
+1>&2 echo  /png:#	Optimization settings PNG (Non-Interlaced):
 1>&2 echo 	1 - Compression level - Xtreme
 1>&2 echo 	2 - Compression level - Advanced
 1>&2 echo 	0 - Skip (default)
