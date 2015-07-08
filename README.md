@@ -87,9 +87,10 @@ call iCatalyst.bat /png:2 /jpg:2 "/outdir:true" "C:\images"
 |:-------|:----------|
 |![Advanced](https://cloud.githubusercontent.com/assets/3890881/7943713/f816fd26-096e-11e5-8a8d-036e9fd443bf.png)|![Xtreme](https://cloud.githubusercontent.com/assets/3890881/7943637/6c37201a-096e-11e5-92ca-855f69ed95ef.png)|
 |Size — 55,57 KB; Optimization time — 1,5 s|Size — 54,65 KB; Optimization time — 7,5 s|
-|PNG interlace method — None|PNG interlace method — None|
 |`TruePNG` + `Advdef`|`TruePNG` + `PNGWolfZopfli`|
 |The compression ratio is ~ 10% higher compared to Adobe Photoshop CC 2014 (Save for Web)|The compression ratio is ~ 2% higher compared to Advanced optimization modes, compression speed below ~ 5 times|
+
+Interlace option — `None`. Displays the image in a browser only when download is complete.
 
 - `Skip` — skip the optimization of images PNG.
 
