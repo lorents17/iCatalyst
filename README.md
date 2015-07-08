@@ -38,7 +38,7 @@ Operating system — Windows XP SP3 and higher.
 call iCatalyst.bat [options] [add folders \ add files]
 
 Options:
-/png:#	Optimization settings PNG:
+/png:#	Optimization settings PNG (Non-Interlaced):
 		1 - Compression level - Xtreme
 		2 - Compression level - Advanced
 		0 - Skip (default)
