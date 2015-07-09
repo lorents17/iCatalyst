@@ -100,7 +100,7 @@ call iCatalyst.bat /png:2 /jpg:2 "/outdir:true" "C:\images"
 |![Baseline](https://cloud.githubusercontent.com/assets/3890881/7943666/9c3c1324-096e-11e5-8cf1-bceade0ebd85.gif)|![Progressive](https://cloud.githubusercontent.com/assets/3890881/7943679/ace1271e-096e-11e5-9ca4-6f33f421ca52.gif)|
 |Для изображений < 10 КБ, рекомендуется использовать — `Baseline` ([подробнее](http://webo.in/articles/habrahabr/73-jpeg-baseline-progressive/))|Для изображений > 10 КБ, рекомендуется использовать — `Progressive` ([подробнее](http://webo.in/articles/habrahabr/73-jpeg-baseline-progressive/))|
 
-- `Default` — использует параметры оптимизации по умолчанию;
+- `Default` — использует параметры оптимизации оригинального изображения;
 - `skip` — пропускает оптимизацию изображений JPEG.
 
 ### Параметры оптимизации GIF
