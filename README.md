@@ -46,7 +46,7 @@ Options:
 /jpg:#	Optimization settings JPEG:
 		1 - Encoding Process - Baseline
 		2 - Encoding Process - Progressive
-		3 - Optimization settings default
+		3 - Optimization settings original images
 		0 - Skip (default)
 
 /gif:#	Optimization settings GIF:
