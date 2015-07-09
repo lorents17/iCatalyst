@@ -110,7 +110,7 @@ Interlace option — None. Displays the image in a browser only when download is
 
 ![GIF](https://cloud.githubusercontent.com/assets/3890881/7943690/c73a84ac-096e-11e5-8920-a088a8a0ee60.png)
 
-- `Default` — use the optimization settings by default;
+- `Default` — use the optimization settings default;
 - `Skip` — skip the optimization of images GIF.
 
 ### Additionally
