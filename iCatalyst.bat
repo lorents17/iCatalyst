@@ -844,7 +844,7 @@ title [Manual] %name% %version%
 1>&2 echo  /jpg:#	Optimization settings JPEG:
 1>&2 echo 	1 - Encoding Process - Baseline
 1>&2 echo 	2 - Encoding Process - Progressive
-1>&2 echo 	3 - Optimization settings default
+1>&2 echo 	3 - Optimization settings original images
 1>&2 echo 	0 - Skip (default)
 1>&2 echo.
 1>&2 echo  /gif:#	Optimization settings GIF:
