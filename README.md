@@ -50,7 +50,7 @@ Options:
 		0 - Skip (default)
 
 /gif:#	Optimization settings GIF:
-		1 - Optimization settings default
+		1 - uses settings of original images
 		0 - Skip (default)
 
 "/outdir:#	Settings save optimized images:
@@ -110,7 +110,7 @@ Interlace option — None. Displays the image in a browser only when download is
 
 ![GIF](https://cloud.githubusercontent.com/assets/3890881/7943690/c73a84ac-096e-11e5-8920-a088a8a0ee60.png)
 
-- `Default` — use the optimization settings default;
+- `Default` — uses settings of original images;
 - `Skip` — skip the optimization of images GIF.
 
 ### Additionally
