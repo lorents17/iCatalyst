@@ -23,7 +23,7 @@ Loseless PNG, JPEG and GIF optimization / compression tool for Windows.
 - MozJPEGTran ([MozJPEG](https://github.com/mozilla/mozjpeg) 3.1)
 
 ##### GIF:
-- [GIFSicle](http://www.lcdf.org/gifsicle/) 1.87
+- [GIFSicle](http://www.lcdf.org/gifsicle/) 1.88
 
 ##### Additional software:
 - DlgMsgBox 29.02.2012
