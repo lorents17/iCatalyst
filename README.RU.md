@@ -11,7 +11,7 @@
 ### Инструменты
 
 ##### PNG:
-- AdvDef ([AdvanceComp](http://advancemame.sourceforge.net/doc-advdef.html) 1.20 beta)
+- AdvDef ([AdvanceComp](https://github.com/amadvance/advancecomp) 1.20)
 - DeflOpt 2.07
 - [Defluff](http://encode.ru/threads/1214-defluff-a-deflate-huffman-optimizer) 0.3.2
 - [PNGWolfZopfli](https://github.com/jibsen/pngwolf-zopfli) 1.0.0
