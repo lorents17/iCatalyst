@@ -38,6 +38,7 @@
 call iCatalyst.bat [options] [add folders \ add files]
 
 Options:
+
 /png:#	Параметры оптимизации PNG (Non-Interlaced):
 		1 - Уровень сжатия - Xtreme
 		2 - Уровень сжатия - Advanced
