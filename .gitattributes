@@ -1,0 +1,3 @@
+*.bat text eol=crlf
+*.ini text eol=crlf
+*.js text eol=crlf
