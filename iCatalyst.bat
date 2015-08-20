@@ -96,6 +96,7 @@ set "jpeg="
 set "gif="
 set "perr="
 set "stime="
+set "ftime="
 set "updateurl=http://x128.ho.ua/update.ini"
 set "configpath=%~dp0\Tools\config.ini"
 set "logfile=%tmppath%\Images"
@@ -699,9 +700,9 @@ if %thread% equ 1 (call:printfileerr "%~f1" "%~2")
 exit /b
 
 :end
-if not defined stime call:setvtime stime
 call:setvtime ftime
-set "changePNG=0" & set "percPNG=0" & set "fract=0"
+set "fract=0"
+set "changePNG=0" & set "percPNG=0"
 set "changeJPG=0" & set "percJPG=0"
 set "changeGIF=0" & set "percGIF=0"
 set "TotalNumNOptJPG=0" & set "TotalNumNOptPNG=0" & set "TotalNumNOptGIF=0"
