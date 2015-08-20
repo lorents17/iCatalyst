@@ -854,7 +854,7 @@ title [Manual] %name% %version%
 1>&2 echo  "/outdir:#" Settings save optimized images:
 1>&2 echo 	true  - replace the original image on optimized
 1>&2 echo 	false - open dialog box for saving images (default)
-1>&2 echo 	"full path to folder - specify the folder to save images.
+1>&2 echo 	"full path to folder" - specify the folder to save images.
 1>&2 echo 	for example: "/outdir:C:\temp", if the destination folder does not 
 1>&2 echo 	exist, it will be created automatically.
 1>&2 echo.
