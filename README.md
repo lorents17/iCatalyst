@@ -91,7 +91,7 @@ call iCatalyst.bat /png:2 /jpg:2 "/outdir:true" "C:\images"
 |`TruePNG` + `Advdef`|`TruePNG` + `PNGWolfZopfli`|
 |The compression ratio is ~ 10% higher compared to Adobe Photoshop CC 2014 (Save for Web)|The compression ratio is ~ 2% higher compared to Advanced optimization modes, compression speed below ~ 5 times|
 
-Interlace option — None. Displays the image in a browser only when download is complete.
+`Interlace option` — None. Displays the image in a browser only when download is complete.
 
 - `Skip` — skip the optimization of images PNG.
 
