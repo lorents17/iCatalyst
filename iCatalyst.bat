@@ -11,8 +11,8 @@ if "%~1" equ "" call:helpmsg & exit /b
 title %name% %version%
 set "fullname=%~0"
 set "scrpath=%~dp0"
-set "sconfig=%scrpath%tools\"
-set "scripts=%scrpath%tools\scripts\"
+set "sconfig=%scrpath%Tools\"
+set "scripts=%scrpath%Tools\scripts\"
 set "tmppath=%TEMP%\%name%\"
 set "errortimewait=30"
 set "iclock=%TEMP%ic.lck"
