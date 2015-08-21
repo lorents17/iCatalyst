@@ -503,7 +503,7 @@ if not exist "%~2" (
 	exit /b 1
 )
 if %png% equ 1 (
-	>"%pnglog%" 2>nul truepng -y -i0 -zw7 -zc7 -zm5-9 -zs0-3 -f0,5 -fs:2 %xtreme% -force -out "%filework%" "%~2"
+	>"%pnglog%" 2>nul truepng -y -i0 -zw7 -zc7 -zm3-9 -zs0-3 -f0,5 -fs:2 %xtreme% -force -out "%filework%" "%~2"
 	if errorlevel 1 (call:saverrorlog "%~f2" "The image is not supported" & goto:pngfwe)
 	for /f "tokens=2,4,6,8,10 delims=:	" %%a in ('findstr /r /i /b /c:"zc:..zm:..zs:" "%pnglog%"') do (
 		set "zc=%%a"
@@ -514,7 +514,7 @@ if %png% equ 1 (
 	if errorlevel 1 (call:saverrorlog "%~f2" "The image is not supported" & goto:pngfwe)
 )
 if %png% equ 2 (
-	>"%pnglog%" 2>nul truepng -y -i0 -zw7 -zc7 -zm8-9 -zs0,1,3 -f0,1,5 -fs:2 %advanced% -force -out "%filework%" "%~2"
+	>"%pnglog%" 2>nul truepng -y -i0 -zw7 -zc7 -zm8-9 -zs0-1 -f0,1,5 -fs:2 %advanced% -force -out "%filework%" "%~2"
 	if errorlevel 1 (call:saverrorlog "%~f2" "The image is not supported" & goto:pngfwe)
 	for /f "tokens=2,4,6,8,10 delims=:	" %%a in ('findstr /r /i /b /c:"zc:..zm:..zs:" "%pnglog%"') do (
 		set "zc=%%a"
