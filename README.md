@@ -114,9 +114,45 @@ Interlace option — None. Displays the image in a browser only when download is
 - `Default` — uses settings of original images;
 - `Skip` — skip the optimization of images GIF.
 
+### Config.ini
+
+Open the file `Tools\config.ini` with any text editor and follow the instructions.
+
+```
+[options]
+;Number of streams. If value early 0, is used value of parameter %NUMBER_OF_PROCESSORS%.
+thread=0
+
+;Automatic replacement of original images by the optimized.
+outdir=false
+
+;Check update
+update=true
+
+[PNG]
+;Parameters of optimization of PNG:
+;/a# - PNG dirty transparency 0=Clean, 1=Optimize;
+;/g# - PNG gamma 0=Remove, 1=Apply & Remove, 2=Keep;
+;/na - PNG don't change RGB values for fully transparent pixels;
+;/nc - PNG don't change ColorType and BitDepth;
+;/np - PNG don't change Palette.
+xtreme=/a1 /g0
+advanced=/a0 /g0
+
+;Remove PNG Metadata (Chunks).
+chunks=true
+
+[JPEG]
+;Remove JPEG Metadata.
+metadata=true
+
+[GIF]
+;Remove GIF Metadata.
+giftags=true
+```
+
 ### Additionally
 - To deliver optimized images on pause. To do this in the command prompt window app click on the right mouse button and select "Select all", to continue optimizing the image in the window command line application click on the right mouse button.
-- Change the settings of the application. Open the file `Tools\config.ini` with any text editor and follow the instructions.
 - Multithreaded optimizing images. By default, when optimizing the images the app uses multi-threaded mode. It is not recommended to run in parallel more than one copy of the application, as this will significantly reduce the speed of image optimization and performance of the whole system. To disable multi-threading mode, open the file `Tools\config.ini` with any text editor and follow the instructions.
 
 ### Thanks
