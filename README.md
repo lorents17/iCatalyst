@@ -126,7 +126,7 @@ thread=0
 ;Automatic replacement of original images by the optimized.
 outdir=false
 
-;Check update
+;Check update.
 update=true
 
 [PNG]
