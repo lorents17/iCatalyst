@@ -107,7 +107,7 @@ set "countJPG=%tmppath%\countjpg"
 set "countGIF=%tmppath%\countgif"
 set "filelist=%tmppath%\filelist"
 set "filelisterr=%tmppath%\filerr"
-set "thread=" & set "updatecheck=" & set "outdir=" & set "outdir1=" & set "nooutfolder="
+set "thread=" & set "updatecheck=" & set "outdir=" & set "nooutfolder="
 set "metadata=" & set "xtreme=" & set "advanced=" & set "chunks=" & set "giftags="
 call:readini "%configpath%"
 call:sethread %thread%
