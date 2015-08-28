@@ -1,6 +1,6 @@
 # Image Catalyst
 
-Loseless PNG, JPEG and GIF optimization / compression tool for Windows.
+optimization / compression images PNG, JPEG and GIF lossless for Windows.
 
 |![Adobe Photoshop](https://cloud.githubusercontent.com/assets/3890881/8023708/091611e8-0d20-11e5-8b0b-b0fcc62df307.png)|![Image Catalyst](https://cloud.githubusercontent.com/assets/3890881/7943571/ef8e18fc-096d-11e5-9933-0a59653f7ea8.png)|
 |:----------|:----------|
