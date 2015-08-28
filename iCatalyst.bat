@@ -175,7 +175,7 @@ if exist "%filelisterr%" (
 if %TotalNumPNG% equ 0 if %TotalNumJPG% equ 0 if %TotalNumGIF% equ 0 (
 	cls
 	1>&2 echo -------------------------------------------------------------------------------
-	1>&2 echo  Images not found.
+	1>&2 echo  Images not found. Please check images and try again.
 	call:helpmsg
 	exit /b
 )
