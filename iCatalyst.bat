@@ -148,7 +148,7 @@ if defined outdir (
 cls
 title [Loading] %name% %version%
 echo.-------------------------------------------------------------------------------
-echo. Images are analazing. Please wait...
+echo. Images are analyzing. Please wait...
 echo.-------------------------------------------------------------------------------
 cscript //nologo //E:JScript "%scripts%filter.js" %oparam% %outdirparam% %* 1>"%filelist%" 2>"%filelisterr%"
 
