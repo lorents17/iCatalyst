@@ -830,7 +830,7 @@ exit /b
 :helpmsg
 title [Manual] %name% %version%
 1>&2 echo -------------------------------------------------------------------------------
-1>&2 echo  Image Catalyst - optimization / compression images GIF, PNG, and JPEG lossless
+1>&2 echo  Image Catalyst - optimization / compression images PNG, JPEG and GIF lossless
 1>&2 echo.
 1>&2 echo  Recommended to examine ReadMe
 1>&2 echo.
