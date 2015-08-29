@@ -20,6 +20,7 @@ set "LOG=%scrpath%\iCatalyst"
 set "runic="
 call:runic "%name% %version%"
 if defined runic (
+	cls
 	title [Waiting] %name% %version%
 	1>&2 echo -------------------------------------------------------------------------------
 	1>&2 echo  Attention: running %runic% of %name%.
@@ -59,6 +60,7 @@ for %%a in (
 
 :filelisterr
 if defined nofile (
+	cls
 	title [Error] %name% %version%
 	if exist "%tmppath%" 1>nul 2>&1 rd /s /q "%tmppath%"
 	1>&2 echo -------------------------------------------------------------------------------
@@ -116,6 +118,7 @@ if /i "%giftags%" equ "true" (set "giftags=--no-comments --no-extensions --no-na
 call set "outdir=%outdir%"
 call:paramcontrol %*
 if defined perr (
+	cls
 	title [Error] %name% %version%
 	if exist "%tmppath%" 1>nul 2>&1 rd /s /q "%tmppath%"
 	1>&2 echo -------------------------------------------------------------------------------
