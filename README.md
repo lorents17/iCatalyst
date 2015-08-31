@@ -93,9 +93,9 @@ call iCatalyst.bat /png:2 /jpg:2 "/outdir:true" "C:\images"
 
 - `Skip` — skip the optimization of images PNG.
 
-PNG interlace method:
+##### Interlace option:
 - `None` — displays the image in a browser only when download is complete.
-- `Adam7` — displays low-resolution versions of the image in a browser as the file downloads. Interlacing makes download time seem shorter, but it also increases file size (not support). 
+- `Interlaced` — displays low-resolution versions of the image in a browser as the file downloads. Interlacing makes download time seem shorter, but it also increases file size (not support). 
 
 ### JPEG optimization settings
 
