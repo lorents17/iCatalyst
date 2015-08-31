@@ -22,11 +22,11 @@ call:runic "%name% %version%"
 if defined runic (
 	cls
 	title [Waiting] %name% %version%
-	1>&2 echo -------------------------------------------------------------------------------
-	1>&2 echo  Attention: running %runic% of %name%.
+	1>&2 echo.-------------------------------------------------------------------------------
+	1>&2 echo. Attention: running %runic% of %name%.
 	1>&2 echo.
-	1>&2 echo  Press Enter to continue.
-	1>&2 echo -------------------------------------------------------------------------------
+	1>&2 echo. Press Enter to continue.
+	1>&2 echo.-------------------------------------------------------------------------------
 	1>nul pause
 	cls
 )
@@ -63,13 +63,13 @@ if defined nofile (
 	cls
 	title [Error] %name% %version%
 	if exist "%tmppath%" 1>nul 2>&1 rd /s /q "%tmppath%"
-	1>&2 echo -------------------------------------------------------------------------------
-	1>&2 echo  Application can not get access to files:
+	1>&2 echo.-------------------------------------------------------------------------------
+	1>&2 echo. Application can not get access to files:
 	1>&2 echo.
-	for %%j in (%nofile%) do 1>&2 echo  - %%~j
+	for %%j in (%nofile%) do 1>&2 echo. - %%~j
 	1>&2 echo.
-	1>&2 echo  Check access to files and try again.
-	1>&2 echo -------------------------------------------------------------------------------
+	1>&2 echo. Check access to files and try again.
+	1>&2 echo.-------------------------------------------------------------------------------
 	call:dopause & exit /b
 )
 
@@ -110,7 +110,7 @@ set "countGIF=%tmppath%\countgif"
 set "filelist=%tmppath%\filelist"
 set "filelisterr=%tmppath%\filerr"
 set "thread=" & set "updatecheck=" & set "outdir=" & set "nooutfolder="
-set "metadata=" & set "xtreme=" & set "advanced=" & set "chunks=" & set "giftags="
+set "jpegtags=" & set "xtreme=" & set "advanced=" & set "pngtags=" & set "giftags="
 call:readini "%configpath%"
 call:sethread %thread%
 set "updatecheck=%update%" & set "update="
@@ -121,8 +121,8 @@ if defined perr (
 	cls
 	title [Error] %name% %version%
 	if exist "%tmppath%" 1>nul 2>&1 rd /s /q "%tmppath%"
-	1>&2 echo -------------------------------------------------------------------------------
-	1>&2 echo  Unknown value of setting %perr%.
+	1>&2 echo.-------------------------------------------------------------------------------
+	1>&2 echo. Unknown value of setting %perr%.
 	call:helpmsg & exit /b
 )
 if "%png%" equ "0" if "%jpeg%" equ "0" if "%gif%" equ "0" goto:endsetcounters
@@ -150,9 +150,9 @@ if defined outdir (
 )
 cls
 title [Loading] %name% %version%
-echo.-------------------------------------------------------------------------------
-echo. Loading. Please wait...
-echo.-------------------------------------------------------------------------------
+1>&2 echo.-------------------------------------------------------------------------------
+1>&2 echo. Loading. Please wait...
+1>&2 echo.-------------------------------------------------------------------------------
 cscript //nologo //E:JScript "%scripts%filter.js" %oparam% %outdirparam% %* 1>"%filelist%" 2>"%filelisterr%"
 
 :setcounters
@@ -177,8 +177,8 @@ if exist "%filelisterr%" (
 :endsetcounters
 if %TotalNumPNG% equ 0 if %TotalNumJPG% equ 0 if %TotalNumGIF% equ 0 (
 	cls
-	1>&2 echo -------------------------------------------------------------------------------
-	1>&2 echo  Images not found. Please check images and try again.
+	1>&2 echo.-------------------------------------------------------------------------------
+	1>&2 echo. Images not found. Please check images and try again.
 	call:helpmsg
 	exit /b
 )
@@ -188,8 +188,8 @@ for /l %%a in (1,1,%thread%) do (
 	>"%logfile%gif.%%a" echo.
 )
 cls
-echo -------------------------------------------------------------------------------
-echo.
+1>&2 echo.-------------------------------------------------------------------------------
+1>&2 echo.
 if /i "%updatecheck%" equ "true" start "" /b cmd.exe /c ""%fullname%" updateic"
 call:setitle
 call:setvtime stime
@@ -258,16 +258,6 @@ exit /b
 2>nul (3>"%iclock%" 1>&3 call:runic2 "%~1" || (call:waitrandom 5000 & goto:runningcheck2))
 exit /b
 
-:runic2
-call:waitrandom 5000
-call:runic "%~1"
-if defined runic (
-	if %runic% lss %lastrunic% exit /b 0
-	set "lastrunic=%runic%"
-	goto:runic2
-)	
-exit /b 0
-
 :runic
 set "runic="
 for /f "tokens=* delims=" %%a in ('tasklist /fo csv /v /nh ^| find /i /c "%~1" ') do (
@@ -291,7 +281,7 @@ if %2 equ 1 call:threadwork %1 1 %3 %4 & call:typelog %1 1 & exit /b
 for /l %%z in (1,1,%2) do (
 	if not exist "%tmppath%\thrt%%z.lck" (
 		call:typelog %1 %%z
-		>"%tmppath%\thrt%%z.lck" echo Image processing: %3
+		>"%tmppath%\thrt%%z.lck" echo. Image processing: %3
 		start /b /LOW /MIN cmd.exe /s /c ""%fullname%" thrd "%~3" "%~4" %1 %%z"
 		exit /b
 	)
@@ -387,64 +377,64 @@ exit /b
 
 :png
 cls
-title [PNG] %name% %version%
-echo  -------------------------
-echo  Optimization setting PNG:
-echo  -------------------------
-echo.
-echo  [1] Xtreme
-echo.
-echo  [2] Advanced
-echo.
-echo  [0] Skip
-echo.
 set "png="
-echo  ---------------------------------------
+title [PNG] %name% %version%
+1>&2 echo. -------------------------
+1>&2 echo. Optimization setting PNG:
+1>&2 echo. -------------------------
+1>&2 echo.
+1>&2 echo. [1] Xtreme
+1>&2 echo.
+1>&2 echo. [2] Advanced
+1>&2 echo.
+1>&2 echo. [0] Skip
+1>&2 echo.
+1>&2 echo. ---------------------------------------
 set /p png="#Select setting and press Enter [0-2]: "
-echo  ---------------------------------------
-echo.
+1>&2 echo. ---------------------------------------
+1>&2 echo.
 if "%png%" neq "0" if "%png%" neq "1" if "%png%" neq "2" goto:png
 exit /b
 
 :jpeg
 cls
-title [JPEG] %name% %version%
-echo  --------------------------
-echo  Optimization setting JPEG:
-echo  --------------------------
-echo.
-echo  [1] Baseline
-echo.
-echo  [2] Progressive
-echo.
-echo  [3] Default
-echo.
-echo  [0] Skip
-echo.
 set "jpeg="
-echo  ---------------------------------------
+title [JPEG] %name% %version%
+1>&2 echo. --------------------------
+1>&2 echo. Optimization setting JPEG:
+1>&2 echo. --------------------------
+1>&2 echo.
+1>&2 echo. [1] Baseline
+1>&2 echo.
+1>&2 echo. [2] Progressive
+1>&2 echo.
+1>&2 echo. [3] Default
+1>&2 echo.
+1>&2 echo. [0] Skip
+1>&2 echo.
+1>&2 echo. ---------------------------------------
 set /p jpeg="#Select setting and press Enter [0-3]: "
-echo  ---------------------------------------
-echo.
+1>&2 echo. ---------------------------------------
+1>&2 echo.
 if "%jpeg%" neq "0" if "%jpeg%" neq "1" if "%jpeg%" neq "2" if "%jpeg%" neq "3" goto:jpeg
 exit /b
 
 :gif
 cls
-title [GIF] %name% %version%
-echo  -------------------------
-echo  Optimization setting GIF:
-echo  -------------------------
-echo.
-echo  [1] Default
-echo.
-echo  [0] Skip
-echo.
 set "gif="
-echo  ---------------------------------------
+title [GIF] %name% %version%
+1>&2 echo. -------------------------
+1>&2 echo. Optimization setting GIF:
+1>&2 echo. -------------------------
+1>&2 echo.
+1>&2 echo. [1] Default
+1>&2 echo.
+1>&2 echo. [0] Skip
+1>&2 echo.
+1>&2 echo. ---------------------------------------
 set /p gif="#Select setting and press Enter [0-1]: "
-echo  ---------------------------------------
-echo.
+1>&2 echo. ---------------------------------------
+1>&2 echo.
 if "%gif%" neq "0" if "%gif%" neq "1" goto:gif
 exit /b
 
@@ -535,7 +525,7 @@ if errorlevel 1 (call:saverrorlog "%~f2" "The image is not supported" & 1>nul 2>
 if errorlevel 1 (call:saverrorlog "%~f2" "The image is not supported" & goto:pngfwe)
 call:backup2 "%~f2" "%filework%" "%~f3" || set "errbackup=1"
 if %errbackup% neq 0 (call:saverrorlog "%~f2" "The image is not found" & goto:pngfwe)
-if /i "%chunks%" equ "true" (1>nul 2>&1 truepng -nz -md remove all "%~3" || (call:saverrorlog "%~f2" "The image is not supported" & goto:pngfwe))
+if /i "%pngtags%" equ "true" (1>nul 2>&1 truepng -nz -md remove all "%~3" || (call:saverrorlog "%~f2" "The image is not supported" & goto:pngfwe))
 call:savelog "%~f3" %psize%
 if %thread% equ 1 for %%a in ("%~f3") do (set /a "ImageSizePNG+=%%~za" & set /a "TotalSizePNG+=%psize%")
 :pngfwe
@@ -606,7 +596,7 @@ if /i "%~f2" neq "%~f3" (
 :jpegfwf
 1>nul 2>&1 del /f /q "%jpglog%"
 if %errbackup% neq 0 (call:saverrorlog "%~f2" "The image is not found" & goto:jpegfwe)
-if /i "%metadata%" equ "true" (1>nul 2>&1 jpegstripper -y "%~f3" || (call:saverrorlog "%~f2" "The image is not supported" & exit /b))
+if /i "%jpegtags%" equ "true" (1>nul 2>&1 jpegstripper -y "%~f3" || (call:saverrorlog "%~f2" "The image is not supported" & exit /b))
 call:savelog "%~f3" %jsize%
 if %thread% equ 1 for %%a in ("%~f3") do (set /a "ImageSizeJPG+=%%~za" & set /a "TotalSizeJPG+=%jsize%")
 exit /b
@@ -764,19 +754,19 @@ call:totalmsg JPG %jpeg%
 call:totalmsg GIF %gif%
 call:echostd " Started  at - %stime%"
 call:echostd " Finished at - %ftime%"
-echo.
-echo -------------------------------------------------------------------------------
+1>&2 echo.
+1>&2 echo.-------------------------------------------------------------------------------
 call:listerrfiles
-echo  Image optimization is completed.
-echo -------------------------------------------------------------------------------
+1>&2 echo. Image optimization is completed.
+1>&2 echo.-------------------------------------------------------------------------------
 if /i "%updatecheck%" equ "true" (
 	call:waitflag "%iculck%"
 	1>nul 2>&1 del /f /q "%iculck%"
 	if exist "%iculog%" (
 		call:readini "%iculog%"
 		if "%version%" neq "!ver!" (
-			echo  New version available %name% !ver!.
-			echo -------------------------------------------------------------------------------
+			1>&2 echo. New version available %name% !ver!.
+			1>&2 echo.-------------------------------------------------------------------------------
 			start "" !url!
 		)
 		1>nul 2>&1 del /f /q "%iculog%"
@@ -810,17 +800,19 @@ exit /b
 :listerrfiles
 set "iserr="
 for %%a in ("%filelisterr%") do if %%~za gtr 0 (
-	set "iserr=1" & echo. & echo  Image with characters:
+	set "iserr=1"
+	1>&2 echo.
+	1>&2 echo. Image with characters:
 	type "%%~a"
-	echo.
+	1>&2 echo.
 )
 for /f "tokens=2* delims=:" %%a in ('findstr /e /i /r /c:";error" "%logfile%*" 2^>nul') do (
-	if not defined iserr (set "iserr=1" & echo.)
-	echo  Images with errors:
-	for /f "tokens=1-2 delims=;" %%c in ("%%~b") do echo. %%~c
-	echo.
+	if not defined iserr (set "iserr=1" & 1>&2 echo.)
+	1>&2 echo. Images with errors:
+	for /f "tokens=1-2 delims=;" %%c in ("%%~b") do 1>&2 echo. %%~c
+	1>&2 echo.
 )
-if defined iserr echo -------------------------------------------------------------------------------
+if defined iserr (1>&2 echo.-------------------------------------------------------------------------------)
 exit /b
 
 :readini
@@ -832,48 +824,48 @@ exit /b
 
 :helpmsg
 title [Manual] %name% %version%
-1>&2 echo -------------------------------------------------------------------------------
-1>&2 echo  Image Catalyst - optimization / compression images PNG, JPEG and GIF lossless
+1>&2 echo.-------------------------------------------------------------------------------
+1>&2 echo. Image Catalyst - optimization / compression images PNG, JPEG and GIF lossless
 1>&2 echo.
-1>&2 echo  Recommended to examine ReadMe
+1>&2 echo. Recommended to examine ReadMe
 1>&2 echo.
-1>&2 echo  call iCatalyst.bat [options] [add folders \ add files]
+1>&2 echo. call iCatalyst.bat [options] [add folders \ add files]
 1>&2 echo.
-1>&2 echo  Options:
+1>&2 echo. Options:
 1>&2 echo.
-1>&2 echo  /png:#	Optimization settings PNG (Non-Interlaced):
-1>&2 echo 	1 - Compression level - Xtreme
-1>&2 echo 	2 - Compression level - Advanced
-1>&2 echo 	0 - Skip (default)
+1>&2 echo. /png:#	Optimization settings PNG (Non-Interlaced):
+1>&2 echo.	1 - Compression level - Xtreme
+1>&2 echo.	2 - Compression level - Advanced
+1>&2 echo.	0 - Skip (default)
 1>&2 echo.
-1>&2 echo  /jpg:#	Optimization settings JPEG:
-1>&2 echo 	1 - Encoding Process - Baseline
-1>&2 echo 	2 - Encoding Process - Progressive
-1>&2 echo 	3 - uses settings of original images
-1>&2 echo 	0 - Skip (default)
+1>&2 echo. /jpg:#	Optimization settings JPEG:
+1>&2 echo.	1 - Encoding Process - Baseline
+1>&2 echo.	2 - Encoding Process - Progressive
+1>&2 echo.	3 - uses settings of original images
+1>&2 echo.	0 - Skip (default)
 1>&2 echo.
-1>&2 echo  /gif:#	Optimization settings GIF:
-1>&2 echo 	1 - uses settings of original images
-1>&2 echo 	0 - Skip (default)
+1>&2 echo. /gif:#	Optimization settings GIF:
+1>&2 echo.	1 - uses settings of original images
+1>&2 echo.	0 - Skip (default)
 1>&2 echo.
-1>&2 echo  "/outdir:#" Settings save optimized images:
-1>&2 echo 	true  - replace the original image on optimized
-1>&2 echo 	false - open dialog box for saving images (default)
-1>&2 echo 	"full path to folder" - specify the folder to save images.
-1>&2 echo 	for example: "/outdir:C:\temp", if the destination folder does not 
-1>&2 echo 	exist, it will be created automatically.
+1>&2 echo. "/outdir:#" Settings save optimized images:
+1>&2 echo.	true  - replace the original image on optimized
+1>&2 echo.	false - open dialog box for saving images (default)
+1>&2 echo.	"full path to folder" - specify the folder to save images.
+1>&2 echo.	for example: "/outdir:C:\temp", if the destination folder does not 
+1>&2 echo.	exist, it will be created automatically.
 1>&2 echo.
-1>&2 echo  Add folders \ Add files:
-1>&2 echo  - Specify the full path to the images and / or folders with images.
-1>&2 echo    For example: "C:\Images" "C:\logo.png"
-1>&2 echo  - The full paths of images should not be special characters. 
-1>&2 echo    For example: "&", "%%", "(", ")" etc.
-1>&2 echo  - The application optimizes images in nested subfolders.
+1>&2 echo. Add folders \ Add files:
+1>&2 echo. - Specify the full path to the images and / or folders with images.
+1>&2 echo.   For example: "C:\Images" "C:\logo.png"
+1>&2 echo. - The full paths of images should not be special characters. 
+1>&2 echo.   For example: "&", "%%", "(", ")" etc.
+1>&2 echo. - The application optimizes images in nested subfolders.
 1>&2 echo.
-1>&2 echo  Examples:
-1>&2 echo  call iCatalyst.bat /gif:1 "/outdir:C:\photos" "C:\images"
-1>&2 echo  call iCatalyst.bat /png:2 /jpg:2 "/outdir:true" "C:\images"
-1>&2 echo -------------------------------------------------------------------------------
+1>&2 echo. Examples:
+1>&2 echo. call iCatalyst.bat /gif:1 "/outdir:C:\photos" "C:\images"
+1>&2 echo. call iCatalyst.bat /png:2 /jpg:2 "/outdir:true" "C:\images"
+1>&2 echo.-------------------------------------------------------------------------------
 if exist "%tmppath%" 1>nul 2>&1 rd /s /q "%tmppath%"
 call:dopause & exit /b
 
