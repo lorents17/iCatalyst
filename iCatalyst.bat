@@ -809,7 +809,7 @@ for %%a in ("%filelisterr%") do if %%~za gtr 0 (
 for /f "tokens=2* delims=:" %%a in ('findstr /e /i /r /c:";error" "%logfile%*" 2^>nul') do (
 	if not defined iserr (set "iserr=1" & 1>&2 echo.)
 	1>&2 echo. Images with errors:
-	for /f "tokens=1-2 delims=;" %%c in ("%%~b") do 1>&2 echo. %%~c
+	for /f "tokens=1-2 delims=;" %%c in ("%%~b") do echo.%%~c
 	1>&2 echo.
 )
 if defined iserr (1>&2 echo.-------------------------------------------------------------------------------)
