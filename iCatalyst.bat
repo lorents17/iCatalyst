@@ -756,7 +756,7 @@ call:echostd " Started  at - %stime%"
 call:echostd " Finished at - %ftime%"
 1>&2 echo.
 1>&2 echo.-------------------------------------------------------------------------------
-call:listerrfiles
+1>&2 call:listerrfiles
 1>&2 echo. Image optimization is completed.
 1>&2 echo.-------------------------------------------------------------------------------
 if /i "%updatecheck%" equ "true" (
@@ -801,18 +801,20 @@ exit /b
 set "iserr="
 for %%a in ("%filelisterr%") do if %%~za gtr 0 (
 	set "iserr=1"
-	1>&2 echo.
-	1>&2 echo. Image with characters:
+	echo.
+	echo. Image with characters:
 	type "%%~a"
-	1>&2 echo.
+	echo.
 )
+set "iserr2="
 for /f "tokens=2* delims=:" %%a in ('findstr /e /i /r /c:";error" "%logfile%*" 2^>nul') do (
-	if not defined iserr (set "iserr=1" & 1>&2 echo.)
-	1>&2 echo. Images with errors:
+	if not defined iserr (set "iserr=1" & echo.)
+	if not defined iserr2 (echo. Images with errors:& set "iserr2=1")
 	for /f "tokens=1-2 delims=;" %%c in ("%%~b") do echo.%%~c
-	1>&2 echo.
 )
-if defined iserr (1>&2 echo.-------------------------------------------------------------------------------)
+if defined iserr2 echo.
+if defined iserr (echo.-------------------------------------------------------------------------------)
+set "iserr=" & set "iserr2="
 exit /b
 
 :readini
@@ -824,48 +826,50 @@ exit /b
 
 :helpmsg
 title [Manual] %name% %version%
-1>&2 echo.-------------------------------------------------------------------------------
-1>&2 echo. Image Catalyst - optimization / compression images PNG, JPEG and GIF lossless
-1>&2 echo.
-1>&2 echo. Recommended to examine ReadMe
-1>&2 echo.
-1>&2 echo. call iCatalyst.bat [options] [add folders \ add files]
-1>&2 echo.
-1>&2 echo. Options:
-1>&2 echo.
-1>&2 echo. /png:#	Optimization settings PNG (Non-Interlaced):
-1>&2 echo.	1 - Compression level - Xtreme
-1>&2 echo.	2 - Compression level - Advanced
-1>&2 echo.	0 - Skip (default)
-1>&2 echo.
-1>&2 echo. /jpg:#	Optimization settings JPEG:
-1>&2 echo.	1 - Encoding Process - Baseline
-1>&2 echo.	2 - Encoding Process - Progressive
-1>&2 echo.	3 - uses settings of original images
-1>&2 echo.	0 - Skip (default)
-1>&2 echo.
-1>&2 echo. /gif:#	Optimization settings GIF:
-1>&2 echo.	1 - uses settings of original images
-1>&2 echo.	0 - Skip (default)
-1>&2 echo.
-1>&2 echo. "/outdir:#" Settings save optimized images:
-1>&2 echo.	true  - replace the original image on optimized
-1>&2 echo.	false - open dialog box for saving images (default)
-1>&2 echo.	"full path to folder" - specify the folder to save images.
-1>&2 echo.	for example: "/outdir:C:\temp", if the destination folder does not 
-1>&2 echo.	exist, it will be created automatically.
-1>&2 echo.
-1>&2 echo. Add folders \ Add files:
-1>&2 echo. - Specify the full path to the images and / or folders with images.
-1>&2 echo.   For example: "C:\Images" "C:\logo.png"
-1>&2 echo. - The full paths of images should not be special characters. 
-1>&2 echo.   For example: "&", "%%", "(", ")" etc.
-1>&2 echo. - The application optimizes images in nested subfolders.
-1>&2 echo.
-1>&2 echo. Examples:
-1>&2 echo. call iCatalyst.bat /gif:1 "/outdir:C:\photos" "C:\images"
-1>&2 echo. call iCatalyst.bat /png:2 /jpg:2 "/outdir:true" "C:\images"
-1>&2 echo.-------------------------------------------------------------------------------
+1>&2 (
+	echo.-------------------------------------------------------------------------------
+	echo. Image Catalyst - optimization / compression images PNG, JPEG and GIF lossless
+	echo.
+	echo. Recommended to examine ReadMe
+	echo.
+	echo. call iCatalyst.bat [options] [add folders \ add files]
+	echo.
+	echo. Options:
+	echo.
+	echo. /png:#	Optimization settings PNG ^(Non-Interlaced^):
+	echo.	1 - Compression level - Xtreme
+	echo.	2 - Compression level - Advanced
+	echo.	0 - Skip ^(default^)
+	echo.
+	echo. /jpg:#	Optimization settings JPEG:
+	echo.	1 - Encoding Process - Baseline
+	echo.	2 - Encoding Process - Progressive
+	echo.	3 - uses settings of original images
+	echo.	0 - Skip ^(default^)
+	echo.
+	echo. /gif:#	Optimization settings GIF:
+	echo.	1 - uses settings of original images
+	echo.	0 - Skip ^(default^)
+	echo.
+	echo. "/outdir:#" Settings save optimized images:
+	echo.	true  - replace the original image on optimized
+	echo.	false - open dialog box for saving images ^(default^)
+	echo.	"full path to folder" - specify the folder to save images.
+	echo.	for example: "/outdir:C:\temp", if the destination folder does not 
+	echo.	exist, it will be created automatically.
+	echo.
+	echo. Add folders \ Add files:
+	echo. - Specify the full path to the images and / or folders with images.
+	echo.   For example: "C:\Images" "C:\logo.png"
+	echo. - The full paths of images should not be special characters. 
+	echo.   For example: "&", "%%", "(", ")" etc.
+	echo. - The application optimizes images in nested subfolders.
+	echo.
+	echo. Examples:
+	echo. call iCatalyst.bat /gif:1 "/outdir:C:\photos" "C:\images"
+	echo. call iCatalyst.bat /png:2 /jpg:2 "/outdir:true" "C:\images"
+	echo.-------------------------------------------------------------------------------
+)
 if exist "%tmppath%" 1>nul 2>&1 rd /s /q "%tmppath%"
 call:dopause & exit /b
 
