@@ -20,7 +20,7 @@
 ##### JPEG:
 - [JPEGinfo](http://rtfreesoft.blogspot.ru/2014/03/jpginfo.html) от 16.03.2014
 - [JPEGstripper](http://rtfreesoft.blogspot.ru/2014/03/jpegstripper.html) от 16.03.2014
-- MozJPEGTran ([MozJPEG](https://github.com/mozilla/mozjpeg) 3.1)
+- JPEGTran ([MozJPEG](https://github.com/mozilla/mozjpeg) 3.1)
 
 ##### GIF:
 - [GIFSicle](http://www.lcdf.org/gifsicle/) 1.88
