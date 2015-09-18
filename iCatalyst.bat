@@ -45,7 +45,7 @@ for %%a in (
 	"%apps%gifsicle.exe"
 	"%apps%jpegstripper.exe"
 	"%apps%jpginfo.exe"
-	"%apps%mozjpegtran.exe"
+	"%apps%jpegtran.exe"
 	"%apps%pngwolfzopfli.exe"
 	"%apps%truepng.exe"
 	"%scripts%filter.js"
@@ -345,7 +345,7 @@ exit /b
 exit /b
 
 ::%1 - png | jpg | gif
-::%2 - ­®¬¥à ¯®â®ª 
+::%2 - Â­Â®Â¬Â¥Ã  Â¯Â®Ã¢Â®ÂªÂ 
 ::%3 - input file
 ::%4 - output file
 :threadwork
@@ -618,7 +618,7 @@ if /i "%~f2" neq "%~f3" (1>nul 2>&1 del /f /q "%filework%")
 1>nul 2>&1 del /f /q "%jpglog%"
 exit /b 1
 
-::%1 - ­®¬¥à ¯®â®ª 
+::%1 - Â­Â®Â¬Â¥Ã  Â¯Â®Ã¢Â®ÂªÂ 
 ::%2 - input file
 ::%3 - output file
 :giffilework
