@@ -40,7 +40,6 @@ for %%a in (
 	"%sconfig%config.ini"
 	"%apps%advdef.exe"
 	"%apps%deflopt.exe"
-	"%apps%defluff.exe"
 	"%apps%dlgmsgbox.exe"
 	"%apps%gifsicle.exe"
 	"%apps%jpegstripper.exe"
@@ -516,7 +515,7 @@ if %png% equ 1 (
 		set "zm=%%b"
 		set "zs=%%c"
 	)
-	pngwolfzopfli --zopfli-iter=10 --zopfli-maxsplit=0 --zlib-window=15 --zlib-level=!zc! --zlib-memlevel=!zm! --zlib-strategy=!zs! --max-stagnate-time=0 --max-evaluations=1 --in="%filework%" --out="%filework%" 1>nul 2>&1
+	pngwolfzopfli --zopfli-iter=15 --zopfli-maxsplit=0 --zlib-window=15 --zlib-level=!zc! --zlib-memlevel=!zm! --zlib-strategy=!zs! --max-stagnate-time=0 --max-evaluations=1 --in="%filework%" --out="%filework%" 1>nul 2>&1
 	if errorlevel 1 (call:saverrorlog "%~f2" "The image is not supported" & goto:pngfwe)
 )
 if %png% equ 2 (
@@ -532,9 +531,7 @@ if %png% equ 2 (
 	advdef -z3 "%filework%" 1>nul 2>&1
 	if errorlevel 1 (call:saverrorlog "%~f2" "The image is not supported" & goto:pngfwe)
 )
-deflopt -k "%filework%" >nul && defluff < "%filework%" > "%filework%-defluff.png" 2>nul 
-if errorlevel 1 (call:saverrorlog "%~f2" "The image is not supported" & 1>nul 2>&1 del /f/q "%filework%-defluff.png" & goto:pngfwe)
-1>nul 2>&1 move /y "%filework%-defluff.png" "%filework%" && deflopt -k "%filework%" >nul
+deflopt -k "%filework%" 1>nul 2>&1
 if errorlevel 1 (call:saverrorlog "%~f2" "The image is not supported" & goto:pngfwe)
 call:backup2 "%~f2" "%filework%" "%~f3" || set "errbackup=1"
 if %errbackup% neq 0 (call:saverrorlog "%~f2" "The image is not found" & goto:pngfwe)
@@ -561,7 +558,7 @@ if not exist "%~2" (
 	exit /b 1
 )
 if %jpeg% equ 1 (
-	mozjpegtran -verbose -revert -optimize -copy all -outfile "%filework%" "%~2" 1>"%jpglog%" 2>&1
+	jpegtran -verbose -revert -optimize -copy all -outfile "%filework%" "%~2" 1>"%jpglog%" 2>&1
 	if errorlevel 1 (call:saverrorlog "%~f2" "The image is not supported" & goto:jpegfwe)
 	for /f "tokens=4,10 delims=:,= " %%a in ('findstr /C:"Start Of Frame" "%jpglog%" 2^>nul') do (set "ep=%%a")
 	if "!ep!" equ "0xc0" goto:jpegfwb
@@ -573,7 +570,7 @@ if %jpeg% equ 1 (
 	)
 )
 if %jpeg% equ 2 (
-	mozjpegtran -verbose -copy all -outfile "%filework%" "%~2" 1>"%jpglog%" 2>&1
+	jpegtran -verbose -copy all -outfile "%filework%" "%~2" 1>"%jpglog%" 2>&1
 	if errorlevel 1 (call:saverrorlog "%~f2" "The image is not supported" & goto:jpegfwe)
 	for /f "tokens=4,10 delims=:,= " %%a in ('findstr /C:"Start Of Frame" "%jpglog%" 2^>nul') do (set "ep=%%a")
 	if "!ep!" equ "0xc2" goto:jpegfwb
@@ -589,12 +586,12 @@ if %jpeg% equ 3 (
 	if errorlevel 1 (call:saverrorlog "%~f2" "The image is not supported" & goto:jpegfwe)
 	for /f "usebackq tokens=5" %%a in ("%jpglog%") do set "ep=%%~a"
 	if /i "!ep!" equ "Baseline" (
-		mozjpegtran -verbose -revert -optimize -copy all -outfile "%filework%" "%~2" 1>nul 2>&1
+		jpegtran -verbose -revert -optimize -copy all -outfile "%filework%" "%~2" 1>nul 2>&1
 		if errorlevel 1 (call:saverrorlog "%~f2" "The image is not supported" & goto:jpegfwe)
 		goto:jpegfwb
 	)
 	if /i "!ep!" equ "Progressive" (
-		mozjpegtran -verbose -copy all -outfile "%filework%" "%~2" 1>nul 2>&1
+		jpegtran -verbose -copy all -outfile "%filework%" "%~2" 1>nul 2>&1
 		if errorlevel 1 (call:saverrorlog "%~f2" "The image is not supported" & goto:jpegfwe)
 		goto:jpegfwb
 	)
