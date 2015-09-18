@@ -276,6 +276,10 @@ cscript //nologo //E:JScript "%scripts%update.js" %updateurl% 2>nul 1>"%iculog%"
 1>nul 2>&1 del /f /q "%iculck%"
 exit /b
 
+::%1 - png | jpg | gif
+::%2 - %thread%
+::%3 - input file
+::%4 - output file
 :createthread
 if %2 equ 1 call:threadwork %1 1 %3 %4 & call:typelog %1 1 & exit /b
 for /l %%z in (1,1,%2) do (
@@ -340,6 +344,10 @@ exit /b
 1>&2 echo.%~1
 exit /b
 
+::%1 - png | jpg | gif
+::%2 - номер потока
+::%3 - input file
+::%4 - output file
 :threadwork
 1>nul 2>&1 md "%~dp4"
 if /i "%1" equ "png" call:pngfilework %2 %3 %4 & if %thread% gtr 1 >>"%countPNG%.%2" echo.1
@@ -476,6 +484,11 @@ set "titlestr="
 set "tmpn="
 exit /b
 
+::%1 - input file
+::%2 - output file
+::%3 - png | jpg | gif
+::%4 - %thread%
+::%5 - ImageNum(PNG|JPG|GIF)
 :filework
 call:createthread %3 %4 "%~f1" "%~f2"
 set /a "%5+=1"
@@ -605,16 +618,22 @@ if /i "%~f2" neq "%~f3" (1>nul 2>&1 del /f /q "%filework%")
 1>nul 2>&1 del /f /q "%jpglog%"
 exit /b 1
 
+::%1 - номер потока
+::%2 - input file
+::%3 - output file
 :giffilework
 set "gsize=%~z2"
 set "errbackup=0"
 set "logfile2=%logfile%gif.%1"
+set "filework="
 if /i "%~f2" equ "%~f3" (
 	set "filework1=%tmppath%\%~n2%1%-gifsicle1~x1"
+	set "filework=!filework1! "
 ) else (
 	set "filework1=%~f3"
 )
 set "filework2=%tmppath%\%~n2%1%-gifsicle2~x1"
+set "filework=%filework%%filework2%"
 if not exist "%~2" (
 	call:saverrorlog "%~f2" "The image is not found"
 	exit /b 1
@@ -635,8 +654,8 @@ call:savelog "%~f3" %gsize%
 if %thread% equ 1 for %%a in ("%~f3") do (set /a "ImageSizeGIF+=%%~za" & set /a "TotalSizeGIF+=%jsize%")
 exit /b
 :giffwe
-if /i "%~f2" neq "%~f3" 1>nul 2>&1 del /f /q "%filework1%"
-1>nul 2>&1 del /f /q "%filework2%"
+if /i "%~f2" neq "%~f3" if exist "%filework1%" del /f /q "%filework1%"
+if exist "%filework2%" del /f /q "%filework2%"
 exit /b 1
 
 :backup
@@ -687,7 +706,7 @@ set "%1=%sign%%int%.%fractd:~1%"
 exit /b
 
 :saverrorlog
-1>nul 2>&1 del /f /q "%filework%"
+if exist "%filework%" 1>nul 2>&1 del /f /q "%filework%"
 >>"%logfile2%" echo.%~1;%~2;error
 if %thread% equ 1 (call:printfileerr "%~f1" "%~2")
 exit /b
