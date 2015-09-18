@@ -345,7 +345,7 @@ exit /b
 exit /b
 
 ::%1 - png | jpg | gif
-::%2 - ­®¬¥à ¯®â®ª 
+::%2 - thread number
 ::%3 - input file
 ::%4 - output file
 :threadwork
@@ -618,7 +618,7 @@ if /i "%~f2" neq "%~f3" (1>nul 2>&1 del /f /q "%filework%")
 1>nul 2>&1 del /f /q "%jpglog%"
 exit /b 1
 
-::%1 - ­®¬¥à ¯®â®ª 
+::%1 - thread number
 ::%2 - input file
 ::%3 - output file
 :giffilework
