@@ -141,11 +141,11 @@ xtreme=/a1 /g0
 advanced=/a0 /g0
 
 ;Remove PNG Metadata (Chunks).
-chunks=true
+pngtags=true
 
 [JPEG]
 ;Remove JPEG Metadata.
-metadata=true
+jpegtags=true
 
 [GIF]
 ;Remove GIF Metadata.
