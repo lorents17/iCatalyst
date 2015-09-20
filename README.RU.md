@@ -145,7 +145,7 @@ pngtags=true
 
 [JPEG]
 ;Удалить метаданные.
-metadata=true
+jpegtags=true
 
 [GIF]
 ;Удалить метаданные.
