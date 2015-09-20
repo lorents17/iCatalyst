@@ -140,15 +140,15 @@ update=true
 xtreme=/a1 /g0
 advanced=/a0 /g0
 
-;Удалить Chunks.
-chunks=true
+;Удалить метаданные (chunks).
+pngtags=true
 
 [JPEG]
-;Удалить Metadata.
+;Удалить метаданные.
 metadata=true
 
 [GIF]
-;Удалить Metadata.
+;Удалить метаданные.
 giftags=true
 ```
 
