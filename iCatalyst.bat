@@ -826,7 +826,7 @@ set "iserr2="
 for /f "tokens=2* delims=:" %%a in ('findstr /e /i /r /c:";error" "%logfile%*" 2^>nul') do (
 	if not defined iserr (set "iserr=1" & echo.)
 	if not defined iserr2 (echo. Images with errors:& set "iserr2=1")
-	for /f "tokens=1-2 delims=;" %%c in ("%%~b") do echo.%%~c
+	for /f "tokens=1-2 delims=;" %%c in ("%%~b") do echo. %%~c
 )
 if defined iserr2 echo.
 if defined iserr (echo.-------------------------------------------------------------------------------)
