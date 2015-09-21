@@ -322,7 +322,7 @@ if "%~4" neq "0" (
 	call:division float 1024 100
 	call:echostd " Out   - !float! KB (!change! KB, %5%%%%%%)"
 ) else (
-	call:echostd " Skip  - This image cannot be optimized any further"
+	call:echostd " Skip  - The image is already optimized"
 )
 call:echostd -------------------------------------------------------------------------------
 call:echostd
