@@ -515,7 +515,7 @@ if %png% equ 1 (
 		set "zm=%%b"
 		set "zs=%%c"
 	)
-	pngwolfzopfli --zopfli-iter=15 --zopfli-maxsplit=0 --zlib-window=15 --zlib-level=!zc! --zlib-memlevel=!zm! --zlib-strategy=!zs! --max-stagnate-time=0 --max-evaluations=1 --in="%filework%" --out="%filework%" 1>nul 2>&1
+	pngwolfzopfli --zopfli-iter=10 --zopfli-maxsplit=0 --zlib-window=15 --zlib-level=!zc! --zlib-memlevel=!zm! --zlib-strategy=!zs! --max-stagnate-time=0 --max-evaluations=1 --in="%filework%" --out="%filework%" 1>nul 2>&1
 	if errorlevel 1 (call:saverrorlog "%~f2" "The image is not supported" & goto:pngfwe)
 )
 if %png% equ 2 (
