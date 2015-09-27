@@ -8,6 +8,21 @@
 
 ##### Created by [Lorents](https://github.com/lorents17) & [Res2001](https://github.com/res2001)
 
+### Contents:
+- [Tools](https://github.com/lorents17/iCatalyst/blob/master/README.md#tools)
+- [System requirements](https://github.com/lorents17/iCatalyst/blob/master/README.md#system-requirements)
+- [Command line options (cmd.exe)](https://github.com/lorents17/iCatalyst/blob/master/README.md#command-line-options-cmdexe)
+- [Drag and Drop](https://github.com/lorents17/iCatalyst/blob/master/README.md#drag-and-drop)
+- [PNG optimization settings](https://github.com/lorents17/iCatalyst/blob/master/README.md#png-optimization-settings)
+- [JPEG optimization settings](https://github.com/lorents17/iCatalyst/blob/master/README.md#jpeg-optimization-settings)
+- [GIF optimization settings](https://github.com/lorents17/iCatalyst/blob/master/README.md#gif-optimization-settings)
+- [Config.ini](https://github.com/lorents17/iCatalyst/blob/master/README.md#configini)
+- [Additionally](https://github.com/lorents17/iCatalyst/blob/master/README.md#additionally)
+- [Thanks](https://github.com/lorents17/iCatalyst/blob/master/README.md#thanks)
+- [Alpha version](https://github.com/lorents17/iCatalyst/blob/master/README.md#alpha-version)
+- [License](https://github.com/lorents17/iCatalyst/blob/master/README.md#license)
+- [Future plans](https://github.com/lorents17/iCatalyst/blob/master/README.md#future-plans)
+
 ### Tools
 
 ##### PNG:
