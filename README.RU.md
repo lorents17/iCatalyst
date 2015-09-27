@@ -8,6 +8,21 @@
 
 ##### Авторы — [Lorents](https://github.com/lorents17) & [Res2001](https://github.com/res2001)
 
+### Содержание:
+- [Инструменты](https://github.com/lorents17/iCatalyst/blob/master/README.RU.md#%D0%98%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D1%8B)
+- [Системные требования](https://github.com/lorents17/iCatalyst/blob/master/README.RU.md#%D0%A1%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%BD%D1%8B%D0%B5-%D1%82%D1%80%D0%B5%D0%B1%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F)
+- [Параметры командной строки (cmd.exe)](https://github.com/lorents17/iCatalyst/blob/master/README.RU.md#%D0%9F%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D1%82%D1%80%D1%8B-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%BD%D0%BE%D0%B9-%D1%81%D1%82%D1%80%D0%BE%D0%BA%D0%B8-cmdexe)
+- [Drag and Drop](https://github.com/lorents17/iCatalyst/blob/master/README.RU.md#drag-and-drop)
+- [Параметры оптимизации PNG](https://github.com/lorents17/iCatalyst/blob/master/README.RU.md#%D0%9F%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D1%82%D1%80%D1%8B-%D0%BE%D0%BF%D1%82%D0%B8%D0%BC%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B8-png)
+- [Параметры оптимизации JPEG](https://github.com/lorents17/iCatalyst/blob/master/README.RU.md#%D0%9F%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D1%82%D1%80%D1%8B-%D0%BE%D0%BF%D1%82%D0%B8%D0%BC%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B8-jpeg)
+- [Параметры оптимизации GIF](https://github.com/lorents17/iCatalyst/blob/master/README.RU.md#%D0%9F%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D1%82%D1%80%D1%8B-%D0%BE%D0%BF%D1%82%D0%B8%D0%BC%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B8-gif)
+- [Config.ini](https://github.com/lorents17/iCatalyst/blob/master/README.RU.md#configini)
+- [Дополнительно](https://github.com/lorents17/iCatalyst/blob/master/README.RU.md#%D0%94%D0%BE%D0%BF%D0%BE%D0%BB%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE)
+- [Благодарности](https://github.com/lorents17/iCatalyst/blob/master/README.RU.md#%D0%91%D0%BB%D0%B0%D0%B3%D0%BE%D0%B4%D0%B0%D1%80%D0%BD%D0%BE%D1%81%D1%82%D0%B8)
+- [Альфа-версия](https://github.com/lorents17/iCatalyst/blob/master/README.RU.md#%D0%90%D0%BB%D1%8C%D1%84%D0%B0-%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%8F)
+- [Лицензия](https://github.com/lorents17/iCatalyst/blob/master/README.RU.md#%D0%9B%D0%B8%D1%86%D0%B5%D0%BD%D0%B7%D0%B8%D1%8F)
+- [Планы на будущее](https://github.com/lorents17/iCatalyst/blob/master/README.RU.md#%D0%9F%D0%BB%D0%B0%D0%BD%D1%8B-%D0%BD%D0%B0-%D0%B1%D1%83%D0%B4%D1%83%D1%89%D0%B5%D0%B5)
+
 ### Инструменты
 
 ##### PNG:
