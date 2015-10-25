@@ -34,42 +34,49 @@ Operating system — Windows XP SP3 and higher.
 ### Command line options (cmd.exe)
 
 ```
-call iCatalyst.bat [options] [add folders \ add files]
+-----------------------------------------------------------------------------
+ Image Catalyst - lossless PNG, JPEG and GIF image optimization / compression
 
-Options:
+ Please check README for more details
 
-/png:#	Optimization settings PNG (Non-Interlaced):
-		1 - Compression level - Xtreme
-		2 - Compression level - Advanced
-		0 - Skip (default)
+ call iCatalyst.bat [options] [add directories \ add files]
 
-/jpg:#	Optimization settings JPEG:
-		1 - Encoding Process - Baseline
-		2 - Encoding Process - Progressive
-		3 - uses settings of original images
-		0 - Skip (default)
+ Options:
 
-/gif:#	Optimization settings GIF:
-		1 - uses settings of original images
-		0 - Skip (default)
+ /png:# PNG optimization mode (Non-Interlaced):
+        1 - Compression level - Xtreme
+        2 - Compression level - Advanced
+        0 - Skip (default)
 
-"/outdir:#	Settings save optimized images:
-			true  - replace the original image on optimized
-			false - open dialog box for saving images (default)
-			"full path to folder" - specify the folder to save images. 
-			For example: "/outdir:C:\temp", if the destination folder does not exist,
-			it will be created automatically.
+ /jpg:# JPEG optimization mode:
+        1 - Encoding Process - Baseline
+        2 - Encoding Process - Progressive
+        3 - use mode of original image
+        0 - Skip (default)
 
-Add folders \ Add files:
-- Specify the full path to the images and / or folders with images. 
-  For example: "C:\Images" "C:\logo.png"
-- The full paths of images should not be special characters.
-  For example: &, %, (, ) etc.
-- The application optimizes images in nested subfolders.
+ /gif:# GIF optimization mode:
+        1 - use settings of original image
+        0 - Skip (default)
 
-Examples:
-call iCatalyst.bat /gif:1 "/outdir:C:\photos" "C:\images"
-call iCatalyst.bat /png:2 /jpg:2 "/outdir:true" "C:\images"
+ "/outdir:#" image saving options:
+        true  - replace original image with optimized variant
+        false - open dialog box for saving images (default)
+        "full path to directory" - specify directory to save images to.
+        for example: "/outdir:C:\temp". If the destination directory
+        does not exist, it will be created automatically.
+
+ Add directories \ Add files:
+ - Specify full image paths and / or paths to directories containing images.
+   For example: "C:\Images" "C:\logo.png"
+ - Full image paths should not contain any special characters such as
+   "&", "%", "(", ")" etc.
+ - Images in sub-directories are optimized recursively.
+
+ Examples:
+ call iCatalyst.bat /gif:1 "/outdir:C:\photos" "C:\images"
+ call iCatalyst.bat /png:2 /jpg:2 "/outdir:true" "C:\images"
+-------------------------------------------------------------------------------
+
 ```
 
 ### Drag and Drop
