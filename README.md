@@ -1,10 +1,10 @@
 # Image Catalyst
 
-Оptimization / compression images PNG, JPEG and GIF lossless for Windows.
+Lossless PNG, JPEG and GIF image optimization / compression for Windows.
 
 |![Adobe Photoshop](https://cloud.githubusercontent.com/assets/3890881/8023708/091611e8-0d20-11e5-8b0b-b0fcc62df307.png)|![Image Catalyst](https://cloud.githubusercontent.com/assets/3890881/7943571/ef8e18fc-096d-11e5-9933-0a59653f7ea8.png)|
 |:----------|:----------|
-|Adobe Photoshop CC 2014 (Save For Web) — 59,78 КБ|Image Catalyst — 51,39 КБ|
+|Adobe Photoshop CC 2014 (Save For Web) — 59.78 KB|Image Catalyst — 51.39 KB|
 
 ##### Created by [Lorents](https://github.com/lorents17) & [Res2001](https://github.com/res2001)
 
@@ -76,8 +76,8 @@ call iCatalyst.bat /png:2 /jpg:2 "/outdir:true" "C:\images"
 
 ![Drag and Drop](https://cloud.githubusercontent.com/assets/3890881/7943598/28496fd4-096e-11e5-8df6-d6415e47caf8.png)
 
-- The full paths of images should not be special characters. For example: `&`, `%`, `(`, `)`, `!` etc.
-- The application optimizes images in nested subfolders.
+- Full image paths should not contain any special characters such as `&`, `%`, `(`, `)`, `!` etc.
+- Images in sub-directories are optimized recursively.
 
 ### PNG optimization settings
 
@@ -88,9 +88,9 @@ call iCatalyst.bat /png:2 /jpg:2 "/outdir:true" "C:\images"
 |![Advanced](https://cloud.githubusercontent.com/assets/3890881/7943713/f816fd26-096e-11e5-8a8d-036e9fd443bf.png)|![Xtreme](https://cloud.githubusercontent.com/assets/3890881/7943637/6c37201a-096e-11e5-92ca-855f69ed95ef.png)|
 |Size — 55,57 KB; Optimization time — 1,5 s|Size — 54,65 KB; Optimization time — 7,5 s|
 |`TruePNG` + `Advdef`|`TruePNG` + `PNGWolfZopfli`|
-|The compression ratio is ~ 10% higher compared to Adobe Photoshop CC 2014 (Save for Web)|The compression ratio is ~ 2% higher compared to Advanced optimization modes, compression speed below ~ 5 times|
+|Compression ratio is about 10% higher compared to Adobe Photoshop CC 2014 (Save for Web)|Compression ratio is about 2% higher compared to Advanced optimization modes, compression speed is 5 times better|
 
-- `Skip` — skip the optimization of images PNG.
+- `Skip` — skip optimization of PNG images.
 
 ##### Interlace option:
 - `None` — displays the image in a browser only when download is complete.
@@ -106,14 +106,14 @@ call iCatalyst.bat /png:2 /jpg:2 "/outdir:true" "C:\images"
 |For image < 10 KB, it is recommended to use — `Baseline` ([read more](http://yuiblog.com/blog/2008/12/05/imageopt-4/))|For image > 10 KB, it is recommended to use — `Progressive` ([read more](http://yuiblog.com/blog/2008/12/05/imageopt-4/))|
 
 - `Default` — uses settings of original images;
-- `Skip` — skip the optimization of images JPEG.
+- `Skip` — skip optimization of JPEG images.
 
 ### GIF optimization settings
 
 ![GIF](https://cloud.githubusercontent.com/assets/3890881/7943690/c73a84ac-096e-11e5-8920-a088a8a0ee60.png)
 
 - `Default` — uses settings of original images;
-- `Skip` — skip the optimization of images GIF.
+- `Skip` — skip optimization of GIF images.
 
 ### Config.ini
 
@@ -153,12 +153,12 @@ giftags=true
 ```
 
 ### Additionally
-- To deliver optimized images on pause. To do this in the command prompt window app click on the right mouse button and select "Select all", to continue optimizing the image in the window command line application click on the right mouse button.
-- Multithreaded optimizing images. By default, when optimizing the images the app uses multi-threaded mode. It is not recommended to run in parallel more than one copy of the application, as this will significantly reduce the speed of image optimization and performance of the whole system. To disable multi-threading mode, open the file `Tools\config.ini` with any text editor and follow the instructions.
+- To pause optimization process click on right mouse button in the command prompt window and choose "Select all" in the context menu. To resume click right mouse button again.
+- By default optimization runs in multi-threading mode. It is not recommended to run in more than one copy of the application, as it will significantly reduce both the image optimization speed and system performance overall. To disable multi-threading mode, open the file `Tools\config.ini` with any text editor and follow the instructions.
 
 ### Thanks
-- Thanks the authors of the applications that are used in the project;
-- Thanks the participants of the forums [encode.ru](http://encode.ru/), [forum.ru-board.com](http://forum.ru-board.com/), [forum.script-coding.com](http://script-coding.com/forum/), [forum.vingrad.ru](http://forum.vingrad.ru/) и [cyberforum.ru](http://www.cyberforum.ru/) for contribution to the development of the project;
+- Thanks to the authors of the applications that are used in the project;
+- Thanks to the participants of [encode.ru](http://encode.ru/), [forum.ru-board.com](http://forum.ru-board.com/), [forum.script-coding.com](http://script-coding.com/forum/), [forum.vingrad.ru](http://forum.vingrad.ru/) and [cyberforum.ru](http://www.cyberforum.ru/) for contribution to the development of the project;
 - Thanks **X128** for his huge contribution to the development of the project.
 
 ### Alpha version
