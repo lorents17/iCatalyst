@@ -868,7 +868,7 @@ title [Manual] %name% %version%
 	echo.	0 - Skip ^(default^)
 	echo.
 	echo. "/outdir:#" image saving options:
-	echo.	true  - replace original image with optimized variant
+	echo.	true  - replace original image with optimized
 	echo.	false - open dialog box for saving images ^(default^)
 	echo.	"full path to directory" - specify directory to save images to.
 	echo.	for example: "/outdir:C:\temp". If the destination directory
