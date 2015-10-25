@@ -54,7 +54,7 @@ Options:
        0 - Skip (default)
 
 "/outdir:#" image saving options:
-       true  - replace original image with optimized variant
+       true  - replace original image with optimized
        false - open dialog box for saving images (default)
        "full path to directory" - specify directory to save images to.
        for example: "/outdir:C:\temp". If the destination directory
