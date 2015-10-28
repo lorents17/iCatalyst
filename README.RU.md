@@ -39,8 +39,8 @@ call iCatalyst.bat [options] [add folders \ add files]
 Options:
 
 /png:#	Параметры оптимизации PNG (Non-Interlaced):
-		1 - Уровень сжатия - Xtreme
-		2 - Уровень сжатия - Advanced
+		1 - Уровень сжатия - Advanced
+		2 - Уровень сжатия - Xtreme
 		0 - пропустить оптимизацию
 
 /jpg:#	Параметры оптимизации JPEG:
@@ -53,9 +53,9 @@ Options:
 		1 - параметры оптимизации по умолчанию
 		0 - пропустить оптимизацию
 
-"/outdir:#"	Параметры сохранения оптимизированных изображений:
-			true  - заменить оригинальные изображения на оптимизированные
-			false - открыть диалоговое окно для сохранения изображений
+"/outdir:#"	Параметры сохранения изображений:
+			true  - открыть диалоговое окно для сохранения изображений
+			false - заменить оригинальные изображения на оптимизированные
 			"полный путь к папке" - папка сохранения изображений. Например: "/outdir:C:\temp",
 			если папки назначения не существует, то она будет создана автоматически.
 
@@ -80,7 +80,7 @@ call iCatalyst.bat /png:2 /jpg:2 "/outdir:true" "C:\images"
 
 ### Параметры оптимизации PNG
 
-![PNG](https://cloud.githubusercontent.com/assets/3890881/7943611/39d99dd2-096e-11e5-932f-10d5320d10b4.png)
+![PNG](https://cloud.githubusercontent.com/assets/3890881/10802485/3504f4e4-7dce-11e5-85cf-a07fdb822c2b.PNG)
 
 |Advanced|Xtreme|
 |:-------|:----------|
@@ -97,7 +97,7 @@ call iCatalyst.bat /png:2 /jpg:2 "/outdir:true" "C:\images"
 
 ### Параметры оптимизации JPEG
 
-![JPEG](https://cloud.githubusercontent.com/assets/3890881/7943652/873d3c5a-096e-11e5-8050-af54582f5c5b.png)
+![JPEG](https://cloud.githubusercontent.com/assets/3890881/10802484/34d79cec-7dce-11e5-886f-ea71fdc93214.PNG)
 
 |Baseline|Progressive|
 |:-------|:----------|
@@ -109,7 +109,7 @@ call iCatalyst.bat /png:2 /jpg:2 "/outdir:true" "C:\images"
 
 ### Параметры оптимизации GIF
 
-![GIF](https://cloud.githubusercontent.com/assets/3890881/7943690/c73a84ac-096e-11e5-8920-a088a8a0ee60.png)
+![GIF](https://cloud.githubusercontent.com/assets/3890881/10802483/34d638a2-7dce-11e5-9b95-e39aa476c73d.PNG)
 
 - `Default` — использует параметры оптимизации по умолчанию;
 - `Skip` — пропускает оптимизацию изображений GIF.
@@ -124,7 +124,9 @@ call iCatalyst.bat /png:2 /jpg:2 "/outdir:true" "C:\images"
 ;Если указано значение 0, то выбирается значение равное системной переменной %NUMBER_OF_PROCESSORS%.
 thread=0
 
-;Автоматическая замена оригинальных изображений на оптимизированные.
+;Параметры сохранения изображений:
+;true  - открыть диалоговое окно для сохранения изображений
+;false - заменить оригинальные изображения на оптимизированные
 outdir=false
 
 ;Проверить обновление.
