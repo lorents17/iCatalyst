@@ -649,9 +649,15 @@ if %png% equ 2 (
 	pngwolfzopfli --zopfli-iter=10 --zopfli-maxsplit=0 --zlib-window=15 --zlib-level=!zc! --zlib-memlevel=!zm! --zlib-strategy=!zs! --max-stagnate-time=0 --max-evaluations=1 --in="%filework%" --out="%filework%" 1>nul 2>&1
 	if errorlevel 1 (call:saverrorlog "%~f2" 2 %~1 PNG & goto:pngfwe)
 )
+<<<<<<< HEAD
 if %png% equ 1 (
 	>"%pnglog%" 2>nul truepng -y -i0 -zw7 -zc7 -zm8-9 -zs0-1 -f0,5 -fs:2 %advanced% -force -out "%filework%" "%~2"
 	if errorlevel 1 (call:saverrorlog "%~f2" 2 %~1 PNG & goto:pngfwe)
+=======
+if %png% equ 2 (
+	>"%pnglog%" 2>nul truepng -y -i0 -zw7 -zc7 -zm8-9 -zs0-1 -f0,5 -fs:2 %advanced% -force -out "%filework%" "%~2"
+	if errorlevel 1 (call:saverrorlog "%~f2" "The image is not supported" & goto:pngfwe)
+>>>>>>> origin/master
 	for /f "tokens=2,4,6,8,10 delims=:	" %%a in ('findstr /r /i /b /c:"zc:..zm:..zs:" "%pnglog%"') do (
 		set "zc=%%a"
 		set "zm=%%b"
