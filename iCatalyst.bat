@@ -1137,8 +1137,8 @@ title [Manual] %name% %version%
 	echo. Options:
 	echo.
 	echo. /png:#	PNG optimization mode ^(Non-Interlaced^):
-	echo.	1 - Compression level - Xtreme
-	echo.	2 - Compression level - Advanced
+	echo.	1 - Compression level - Advanced
+	echo.	2 - Compression level - Xtreme
 	echo.	0 - Skip ^(default^)
 	echo.
 	echo. /jpg:#	JPEG optimization mode:
@@ -1152,8 +1152,8 @@ title [Manual] %name% %version%
 	echo.	0 - Skip ^(default^)
 	echo.
 	echo. "/outdir:#" image saving options:
-	echo.	true  - replace original image with optimized
-	echo.	false - open dialog box for saving images ^(default^)
+	echo.	true  - open dialog box for saving images ^(default^)
+	echo.	false - replace original image with optimized
 	echo.	"full path to directory" - specify directory to save images to.
 	echo.	for example: "/outdir:C:\temp". If the destination directory
 	echo.	does not exist, it will be created automatically.
