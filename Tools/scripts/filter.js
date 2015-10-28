@@ -18,7 +18,7 @@ if(argn.Exists("Outdir")) {
 		WScript.StdErr.WriteLine(sDOS2Win(" " + outdirorig,true));
 		WScript.quit(-1);
 	}
-	if (outdirorig.toUpperCase() == "TRUE") 
+	if (outdirorig.toUpperCase() == "FALSE") 
 		outdirorig = "";
 	else {
 		outdirorig = fso.GetAbsolutePathName(outdirorig);
