@@ -39,8 +39,8 @@ call iCatalyst.bat [options] [add directories \ add files]
 Options:
 
 /png:# PNG optimization mode (Non-Interlaced):
-       1 - Compression level - Xtreme
-       2 - Compression level - Advanced
+       1 - Compression level - Advanced
+       2 - Compression level - Xtreme
        0 - Skip (default)
 
 /jpg:# JPEG optimization mode:
@@ -54,8 +54,8 @@ Options:
        0 - Skip (default)
 
 "/outdir:#" image saving options:
-       true  - replace original image with optimized
-       false - open dialog box for saving images (default)
+       true  - open dialog box for saving images (default)
+       false - replace original image with optimized
        "full path to directory" - specify directory to save images to.
        for example: "/outdir:C:\temp". If the destination directory
        does not exist, it will be created automatically.
@@ -81,7 +81,7 @@ call iCatalyst.bat /png:2 /jpg:2 "/outdir:true" "C:\images"
 
 ### PNG optimization settings
 
-![PNG](https://cloud.githubusercontent.com/assets/3890881/7943611/39d99dd2-096e-11e5-932f-10d5320d10b4.png)
+![PNG](https://cloud.githubusercontent.com/assets/3890881/10802485/3504f4e4-7dce-11e5-85cf-a07fdb822c2b.PNG)
 
 |Advanced|Xtreme|
 |:-------|:----------|
@@ -98,7 +98,7 @@ call iCatalyst.bat /png:2 /jpg:2 "/outdir:true" "C:\images"
 
 ### JPEG optimization settings
 
-![JPEG](https://cloud.githubusercontent.com/assets/3890881/7943652/873d3c5a-096e-11e5-8050-af54582f5c5b.png)
+![JPEG](https://cloud.githubusercontent.com/assets/3890881/10802484/34d79cec-7dce-11e5-886f-ea71fdc93214.PNG)
 
 |Baseline|Progressive|
 |:-------|:----------|
@@ -110,7 +110,7 @@ call iCatalyst.bat /png:2 /jpg:2 "/outdir:true" "C:\images"
 
 ### GIF optimization settings
 
-![GIF](https://cloud.githubusercontent.com/assets/3890881/7943690/c73a84ac-096e-11e5-8920-a088a8a0ee60.png)
+![GIF](https://cloud.githubusercontent.com/assets/3890881/10802483/34d638a2-7dce-11e5-9b95-e39aa476c73d.PNG)
 
 - `Default` — uses settings of original images;
 - `Skip` — skip optimization of GIF images.
@@ -121,17 +121,19 @@ Open the file `Tools\config.ini` with any text editor and follow the instruction
 
 ```
 [options]
-;Number of streams. If value early 0, is used value of parameter %NUMBER_OF_PROCESSORS%.
+;Number of streams. If value is 0, the %NUMBER_OF_PROCESSORS% value is used
 thread=0
 
-;Automatic replacement of original images by the optimized.
-outdir=false
+;Image saving options:
+;true - open dialog box for saving images
+;false - replace original image with optimized
+outdir=true
 
-;Check update.
+;Check update
 update=true
 
 [PNG]
-;Parameters of optimization of PNG:
+;PNG optimization modes:
 ;/a# - PNG dirty transparency 0=Clean, 1=Optimize;
 ;/g# - PNG gamma 0=Remove, 1=Apply & Remove, 2=Keep;
 ;/na - PNG don't change RGB values for fully transparent pixels;
@@ -140,15 +142,15 @@ update=true
 xtreme=/a1 /g0
 advanced=/a0 /g0
 
-;Remove PNG Metadata (Chunks).
+;Remove PNG Metadata (Chunks)
 pngtags=true
 
 [JPEG]
-;Remove JPEG Metadata.
+;Remove JPEG Metadata
 jpegtags=true
 
 [GIF]
-;Remove GIF Metadata.
+;Remove GIF Metadata
 giftags=true
 ```
 
