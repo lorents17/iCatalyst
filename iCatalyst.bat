@@ -815,13 +815,9 @@ exit /b 0
 ::%3 - thread number
 :savelog
 setlocal
-::echo.%~0: %~2	%~z1
-set "ts=%~2"
-set "is=%~z1"
-call:division2 ts 1024 100
-call:division2 is 1024 100
-set /a "change=%is%-%ts%"
-call:perccalc %ts% %change% perc
+::echo.%~0[in]: %1	%~2	%~z1
+set /a "change=%~z1-%~2"
+call:perccalc %~2 %change% perc
 set /a "change=%~z1-%~2"
 >>"%logfile2%" echo.%~1;%~2;%~z1;%change%;%perc%;ok
 if %thread% equ 1 (
@@ -865,16 +861,16 @@ exit /b
 ::%3 - 10^(number of decimal places) - (100 - 2 decimal places, 1000 - 3 decimal places, 1 - no decimals places)
 ::Return: integer value: %1=!%1!/%2*%3
 :division2
+::echo.%~0[in]: %~1=!%~1! %~2 %~3
 setlocal
-1>nul 2>&1 set /a "int=!%1!/%2"
+1>nul 2>&1 set /a "int=!%~1!/%~2"
 if %~3 equ 1 (
-	endlocal & set "%1=%int%" & exit /b
+	endlocal & set "%~1=%int%" & exit /b
 	exit /b
 )
-1>nul 2>&1 set /a "fractd=!%1!%%%2*%3/%2"
-if "%fractd:~,1%" equ "-" (set "fractd=%fractd:~1%")
-1>nul 2>&1 set /a "fractd=%3+%fractd%"
-endlocal & set "%1=%int%%fractd:~1%"
+1>nul 2>&1 set /a "fractd=!%~1!%%%~2*%~3/%~2"
+endlocal & set /a "%~1=%int%*%~3+(%fractd%)"
+::echo.%~0[out]: !%~1!
 exit /b
 
 :end
