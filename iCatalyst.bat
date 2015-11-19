@@ -923,9 +923,9 @@ if %TotalNumErr% gtr 0 (
 		echo.
 		echo. Images with characters:
 		type "%%~a"
-		echo.%spacebar%
 	)
 	set "isfirst="
+	echo.%spacebar%
 )
 call:fincalc PNG
 call:fincalc JPG
