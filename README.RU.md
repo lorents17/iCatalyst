@@ -2,9 +2,9 @@
 
 Оптимизация / сжатие изображений PNG, JPEG и GIF без потери качества для Windows.
 
-|![Adobe Photoshop](https://cloud.githubusercontent.com/assets/3890881/8023708/091611e8-0d20-11e5-8b0b-b0fcc62df307.png)|![Image Catalyst](https://cloud.githubusercontent.com/assets/3890881/7943571/ef8e18fc-096d-11e5-9933-0a59653f7ea8.png)|
+|![Adobe Photoshop](https://cloud.githubusercontent.com/assets/3890881/8023708/091611e8-0d20-11e5-8b0b-b0fcc62df307.png)|![Image Catalyst](https://cloud.githubusercontent.com/assets/3890881/12110952/70ce4462-b3a2-11e5-8b29-a3822b246dfe.png)|
 |:----------|:----------|
-|Adobe Photoshop CC 2014 (Save For Web) — 59,78 КБ|Image Catalyst — 51,39 КБ|
+|Adobe Photoshop CC 2014 (Save For Web) — 59,78 КБ|Image Catalyst — 51,25 КБ|
 
 ##### Авторы — [Lorents](https://github.com/lorents17) & [Res2001](https://github.com/res2001)
 
@@ -84,8 +84,8 @@ call iCatalyst.bat /png:2 /jpg:2 "/outdir:true" "C:\images"
 
 |Advanced|Xtreme|
 |:-------|:----------|
-|![Advanced](https://cloud.githubusercontent.com/assets/3890881/7943713/f816fd26-096e-11e5-8a8d-036e9fd443bf.png)|![Xtreme](https://cloud.githubusercontent.com/assets/3890881/7943637/6c37201a-096e-11e5-92ca-855f69ed95ef.png)|
-|Размер — 55,57 КБ; Время оптимизации — 1,5 с|Размер — 54,65 КБ; Время оптимизации — 7,5 с|
+|![Advanced](https://cloud.githubusercontent.com/assets/3890881/7943713/f816fd26-096e-11e5-8a8d-036e9fd443bf.png)|![Xtreme](https://cloud.githubusercontent.com/assets/3890881/12110960/92a49db6-b3a2-11e5-9953-adde90844087.png)|
+|Размер — 55,57 КБ; Время оптимизации — 1,5 с|Размер — 54,67 КБ; Время оптимизации — 7,5 с|
 |`TruePNG` + `Advdef`|`TruePNG` + `PNGWolfZopfli`|
 |Степень сжатия на ~ 10% выше по сравнению с Adobe Photoshop CC 2014 (Save for Web)|Степень сжатия на ~ 2% выше по сравнению с режимом оптимизации Advanced, скорость сжатия ниже ~ 5 раз|
 
@@ -125,8 +125,9 @@ call iCatalyst.bat /png:2 /jpg:2 "/outdir:true" "C:\images"
 thread=0
 
 ;Параметры сохранения изображений:
-;true  - открыть диалоговое окно для сохранения изображений
-;false - заменить оригинальные изображения на оптимизированные
+;true  - открыть диалоговое окно для сохранения изображений;
+;false - заменить оригинальные изображения на оптимизированные;
+;path  - путь к папке для сохранения исходящих изображений.
 outdir=false
 
 ;Проверить обновление.
