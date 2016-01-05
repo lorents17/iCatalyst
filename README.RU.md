@@ -2,9 +2,9 @@
 
 Оптимизация / сжатие изображений PNG, JPEG и GIF без потери качества для Windows.
 
-|![Adobe Photoshop](https://cloud.githubusercontent.com/assets/3890881/8023708/091611e8-0d20-11e5-8b0b-b0fcc62df307.png)|![Image Catalyst](https://cloud.githubusercontent.com/assets/3890881/12110952/70ce4462-b3a2-11e5-8b29-a3822b246dfe.png)|
+|![Adobe Photoshop](https://cloud.githubusercontent.com/assets/3890881/12113971/831d0e22-b3b7-11e5-8f6d-a5cc8f993767.png)|![Image Catalyst](https://cloud.githubusercontent.com/assets/3890881/12110952/70ce4462-b3a2-11e5-8b29-a3822b246dfe.png)|
 |:----------|:----------|
-|Adobe Photoshop CC 2014 (Save For Web) — 59,78 КБ|Image Catalyst — 51,25 КБ|
+|Adobe Photoshop CC 2015 (Экспортировать как) — 56,10 КБ|Image Catalyst — 51,25 КБ|
 
 ##### Авторы — [Lorents](https://github.com/lorents17) & [Res2001](https://github.com/res2001)
 
