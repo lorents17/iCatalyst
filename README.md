@@ -128,6 +128,7 @@ thread=0
 ;true  - open dialog box for saving images;
 ;false - replace original image with optimized;
 ;path  - directory for output files.
+outdir=true
 
 ;Check update
 update=true
