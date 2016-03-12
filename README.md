@@ -13,7 +13,7 @@ Lossless PNG, JPEG and GIF image optimization / compression for Windows.
 ##### PNG:
 - AdvDef ([AdvanceComp](https://github.com/amadvance/advancecomp) 1.20)
 - DeflOpt 2.07
-- [PNGWolfZopfli](https://github.com/jibsen/pngwolf-zopfli) 1.0.0
+- [PNGWolfZopfli](https://github.com/jibsen/pngwolf-zopfli) 1.0.1
 - [TruePNG](http://x128.ho.ua/pngutils.html) 0.6.2.0
 
 ##### JPEG:
