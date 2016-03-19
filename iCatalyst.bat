@@ -1,6 +1,6 @@
 @echo off
 
-::Lorents & Res2001 2010-2015
+::Lorents & Res2001 2010-2016
 
 setlocal enabledelayedexpansion
 set "name=Image Catalyst"
