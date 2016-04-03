@@ -162,7 +162,7 @@ giftags=true
 ### Thanks
 - Thanks to the authors of the applications that are used in the project;
 - Thanks to the participants of [encode.ru](http://encode.ru/), [forum.ru-board.com](http://forum.ru-board.com/), [forum.script-coding.com](http://script-coding.com/forum/), [forum.vingrad.ru](http://forum.vingrad.ru/) and [cyberforum.ru](http://www.cyberforum.ru/) for contribution to the development of the project;
-- Thanks **X128** for his huge contribution to the development of the project.
+- Thanks [**X128**](http://x128.ho.ua/) for his huge contribution to the development of the project.
 
 ### Alpha version
 https://github.com/res2001/iCatalyst
