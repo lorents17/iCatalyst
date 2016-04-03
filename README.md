@@ -169,7 +169,7 @@ https://github.com/res2001/iCatalyst
 
 ### License
 
-This software is released under the terms of the [MIT license](https://github.com/lorents17/iCatalyst/blob/master/LICENSE.md).
+This software is released under the terms of the [MIT](https://github.com/lorents17/iCatalyst/blob/master/LICENSE.md) license.
 
 
 ### Future plans
