@@ -22,7 +22,7 @@
 - JPEGTran ([MozJPEG](https://github.com/mozilla/mozjpeg) 3.1)
 
 ##### GIF:
-- [GIFSicle](http://www.lcdf.org/gifsicle/) 1.88
+- [GIFSicle](https://github.com/kohler/gifsicle) 1.88
 
 ##### Дополнительное ПО:
 - DlgMsgBox от 29.02.2012
