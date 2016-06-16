@@ -24,9 +24,6 @@ Lossless PNG, JPEG and GIF image optimization / compression for Windows.
 ##### GIF:
 - [GIFSicle](https://github.com/kohler/gifsicle) 1.88
 
-##### Additional software:
-- DlgMsgBox 29.02.2012
-
 ### System requirements
 
 Operating system — Windows XP SP3 and higher.
