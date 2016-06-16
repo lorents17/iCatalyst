@@ -24,9 +24,6 @@
 ##### GIF:
 - [GIFSicle](https://github.com/kohler/gifsicle) 1.88
 
-##### Дополнительное ПО:
-- DlgMsgBox от 29.02.2012
-
 ### Системные требования
 
 Операционная система — Windows XP SP3 и выше.
