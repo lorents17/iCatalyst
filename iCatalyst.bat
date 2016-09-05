@@ -19,24 +19,24 @@ set "scrpath=%~dp0"
 set "sconfig=%scrpath%Tools\"
 set "scripts=%scrpath%Tools\scripts\"
 set "tmppath=%TEMP%\iCatalyst\"
-set "errortimewait=30"
+set "errortimewait=3000"
 set "iclock=%TEMP%ic.lck"
 set "LOG=%scrpath%\iCatalyst"
-set "runic="
-call:runic "%name% %version%"
-if defined runic (
-	call:clearscreen
-	title [Waiting] %name% %version%
-	1>&2 echo.%spacebar%
-	1>&2 echo. Attention: running %runic% of %name%.
-	1>&2 echo.
-	1>&2 echo. Press Enter to continue.
-	1>&2 echo.%spacebar%
-	1>nul pause
-	call:clearscreen
-)
+if exist "%systemroot%\system32\timeout.exe" (set "istimeout=yes") else set "istimeout="
+call:runningcheck "%name% %version%"
+::echo.This process is work&pause & title %oldtitle%&exit /b
+::if defined runic (
+::	call:clearscreen
+::	title [Waiting] %name% %version%
+::	1>&2 echo.%spacebar%
+::	1>&2 echo. Attention: running %runic% of %name%.
+::	1>&2 echo.
+::	1>&2 echo. Press Enter to continue.
+::	1>&2 echo.%spacebar%
+::	1>nul pause
+::	call:clearscreen
+::)
 set "LOG=%LOG%%runic%"
-if not defined runic if exist "%tmppath%" 1>nul 2>&1 rd /s /q "%tmppath%"
 set "apps=%~dp0Tools\apps\"
 PATH %apps%;%PATH%
 set "nofile="
@@ -312,36 +312,39 @@ endlocal
 exit /b
 
 :runningcheck
+title [Waiting] %name%
+setlocal
 call:runic "%~1"
-set "lastrunic=%runic%"
-if defined runic (
-	title [Waiting] %name% %version%
-	echo.Another process %name% is running. Waiting for it to shut down.
-	call:runningcheck2 "%~1"
+if %runic% gtr 0 (
+	call:clearscreen
+	echo.%spacebar%
+	echo. Another process %name% is running.
+	echo.
+	echo. Waiting for it to shut down or press any key.
+	echo.%spacebar%
+::	call:runningcheck2 "%~1"
+	call:runic2 "%~1"
 )
-exit /b
+endlocal
+title %name% %version%
+exit /b 0
 
 :runningcheck2
-2>nul (3>"%iclock%" 1>&3 call:runic2 "%~1" || (
-	if exist "%systemroot%\system32\timeout.exe" (1>nul 2>&1 timeout /t 5) else call:waitrandom 5000
+2>nul (5>"%iclock%" call:runic2 "%~1" || (
+	call:waitpresskey %errortimewait% || exit /b 1
 	goto:runningcheck2
 ))
-exit /b
+exit /b 0
 
 :runic2
-call:waitrandom 5000
+call:waitpresskey %errortimewait% || exit /b 0
 call:runic "%~1"
-if defined runic (
-	if %runic% lss %lastrunic% exit /b 0
-	set "lastrunic=%runic%"
-	goto:runic2
-)	
+if %runic% gtr 0 goto:runic2
 exit /b 0
 
 :runic
-set "runic="
-for /f "tokens=* delims=" %%a in ('tasklist /fo csv /v /nh ^| find /i /c "%~1" ') do (
-	if %%a gtr 1 set "runic=%%a"
+for /f "tokens=* delims=" %%a in ('tasklist /fo csv /v /nh /fi "IMAGENAME eq cmd.exe" ^| find /i /c "%~1" ') do (
+	set "runic=%%a"
 )
 exit /b
 
@@ -554,9 +557,26 @@ goto:waitflag
 
 :waitrandom
 setlocal
+if not defined istimeout goto:waitrandom2
+set "ww=%~1"
+if %~1 lss 1000 set "ww=1000"
+set /a "ww=%random%%%(%ww%/1000)"
+1>nul 2>&1 timeout /t %ww%
+endlocal & exit /b
+:waitrandom2
 set /a "ww=%random%%%%1"
 1>nul 2>&1 ping -n 1 -w %ww% 127.255.255.255
 endlocal & exit /b
+
+::If press key return errorlevel=1. If timeout - errorlevel=0
+:waitpresskey
+setlocal
+set "ww=%~1"
+if defined istimeout (
+	if %ww% lss 1000 set "ww=1000"
+	timeout /t !ww:~,-3! 2>nul | 1>nul 2>&1 findstr /e "0" || (endlocal & exit /b 1)
+) else call:waitrandom %ww%
+endlocal & exit /b 0
 
 :initsource
 set "isjpeg="
@@ -706,29 +726,34 @@ if not exist "%~2" (
 if %png% equ 2 (
 	>"%pnglog%" 2>nul truepng -y -i0 -zw7 -zc7 -zm5-9 -zs0,1,3 -f0,5 -fs:1 %xtreme% -force -out "%filework%" "%~2"
 	if errorlevel 1 (call:saverrorlog "%~f2" 2 %~1 PNG & goto:pngfwe)
-	for /f "tokens=2,4,6,8,10 delims=:	" %%a in ('findstr /r /i /b /c:"zc:..zm:..zs:" "%pnglog%"') do (
+	for /f "tokens=2,4,6,8,10 delims=:	" %%a in ('findstr /r /i /b /c:"zc:..zm:..zs:" "%pnglog%" 2^>nul') do (
 		set "zc=%%a"
 		set "zm=%%b"
 		set "zs=%%c"
 	)
-	if !zs! equ 3 (
+	if !zs! gtr 1 (
 		set "zs=1"
-		set "iter=20"
+		set "iter=15"
 	)
-	pngwolfzopfli --zopfli-iter=!iter! --zopfli-maxsplit=0 --zlib-window=15 --zlib-level=!zc! --zlib-memlevel=!zm! --zlib-strategy=!zs! --max-stagnate-time=0 --max-evaluations=1 --in="%filework%" --out="%filework%" 1>nul 2>&1
+	1>nul 2>&1 pngwolfzopfli --zopfli-iter=!iter! --zopfli-maxsplit=0 --zlib-window=15 --zlib-level=!zc! --zlib-memlevel=!zm! --zlib-strategy=!zs! --max-stagnate-time=0 --max-evaluations=1 --in="%filework%" --out="%filework%"
 	if errorlevel 1 (call:saverrorlog "%~f2" 2 %~1 PNG & goto:pngfwe)
 )
 if %png% equ 1 (
-	truepng -y -i0 -zw7 -zc7 -zm8-9 -zs0,1,3 -f0,5 -fs:1 %advanced% -force -out "%filework%" "%~2" 1>nul 2>&1
+	>"%pnglog%" 2>nul truepng -y -i0 -zw7 -zc7 -zm8-9 -zs0,1,3 -f0,5 -fs:1 %advanced% -force -out "%filework%" "%~2"
 	if errorlevel 1 (call:saverrorlog "%~f2" 2 %~1 PNG & goto:pngfwe)
-	
-	deflopt -k "%filework%" 1>nul 2>&1
+	for /f "tokens=2,4,6,8,10 delims=:	" %%a in ('findstr /r /i /b /c:"zc:..zm:..zs:" "%pnglog%" 2^>nul') do (
+		set "zc=%%a"
+		set "zm=%%b"
+		set "zs=%%c"
+	)
+	1>nul 2>&1 truepng -y -i0 -zw7 -zc!zc! -zm!zm! -zs!zs! -f5 -fs:7 -na -nc -np "%filework%"
 	if errorlevel 1 (call:saverrorlog "%~f2" 2 %~1 PNG & goto:pngfwe)
-	
-	advdef -z3 "%filework%" 1>nul 2>&1
+	1>nul 2>&1 deflopt -k "%filework%"
+	if errorlevel 1 (call:saverrorlog "%~f2" 2 %~1 PNG & goto:pngfwe)
+	1>nul 2>&1 advdef -z3 "%filework%"
 	if errorlevel 1 (call:saverrorlog "%~f2" 2 %~1 PNG & goto:pngfwe)
 )
-deflopt -k "%filework%" 1>nul 2>&1
+1>nul 2>&1 deflopt -k "%filework%"
 if errorlevel 1 (call:saverrorlog "%~f2" 2 %~1 PNG & goto:pngfwe)
 call:backup2 "%~f2" "%filework%" "%~f3" || set "errbackup=1"
 if %errbackup% neq 0 (call:saverrorlog "%~f2" 2 %~1 PNG & goto:pngfwe)
@@ -1271,7 +1296,7 @@ set "ctitle="
 set "titfile=%TEMP%\%RANDOM%%RANDOM%.tasklist.txt"
 1>"%titfile%" 2>nul tasklist /v /nh /fo csv /fi "pid eq %consolepid%"
 ::For WinXP Rus
-if errorlevel 1 1>"%titfile%" 2>nul tasklist /v /nh /fo csv /fi "ID Процесса eq %consolepid%"
+if errorlevel 1 1>"%titfile%" 2>nul tasklist /v /nh /fo csv /fi "ID ┬П├а┬о├ж┬е├б├б┬а eq %consolepid%"
 for /f "usebackq tokens=8,* delims=," %%a in ("%titfile%") do (
 	for /f "tokens=1 delims=-" %%c in ("%%~b") do set "ctitle=%%~c"
 )
