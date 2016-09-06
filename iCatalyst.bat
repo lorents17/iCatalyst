@@ -11,7 +11,7 @@ set "oldtitle="
 set "consolepid="
 call:getpid consolepid
 call:gettitle oldtitle
-title %name% %version%
+title %name%
 set "spacebar=-------------------------------------------------------------------------------"
 if ## equ #%~1# call:helpmsg & exit /b
 set "fullname=%~0"
@@ -23,19 +23,8 @@ set "errortimewait=3000"
 set "iclock=%TEMP%ic.lck"
 set "LOG=%scrpath%\iCatalyst"
 if exist "%systemroot%\system32\timeout.exe" (set "istimeout=yes") else set "istimeout="
-call:runningcheck "%name% %version%"
+::call:runningcheck "%name% %version%"
 ::echo.This process is work&pause & title %oldtitle%&exit /b
-::if defined runic (
-::	call:clearscreen
-::	title [Waiting] %name% %version%
-::	1>&2 echo.%spacebar%
-::	1>&2 echo. Attention: running %runic% of %name%.
-::	1>&2 echo.
-::	1>&2 echo. Press Enter to continue.
-::	1>&2 echo.%spacebar%
-::	1>nul pause
-::	call:clearscreen
-::)
 set "LOG=%LOG%%runic%"
 set "apps=%~dp0Tools\apps\"
 PATH %apps%;%PATH%
@@ -66,7 +55,7 @@ for %%a in (
 :filelisterr
 if defined nofile (
 	call:clearscreen
-	title [Error] %name% %version%
+	title [Error] %name%
 	if exist "%tmppath%" 1>nul 2>&1 rd /s /q "%tmppath%"
 	1>&2 echo.%spacebar%
 	1>&2 echo. Application can not get access to the following files:
@@ -153,7 +142,6 @@ if defined perr (
 	exit /b
 )
 if not defined params for %%a in ("%filelisterr%") do if %%~za neq 0 (
-	title [Error] %name% %version%
 	1>&2 (
 		echo.%spacebar%
 		echo. Unknown parameters:
@@ -171,7 +159,7 @@ if "%png%" equ "0" if "%jpeg%" equ "0" if "%gif%" equ "0" goto:endsetcounters
 if /i "%outdir%" equ "false" (set "outdir=" & set "nooutfolder=yes") else if /i "%outdir%" equ "true" set "outdir="
 if not defined nooutfolder if not defined outdir (
 	call:clearscreen
-	title [Loading] %name% %version%
+	title [Loading] %name%
 	for /f "tokens=* delims=" %%a in ('browsefolder.exe /CurPath:desktop /Title:"Image Catalyst" /Description:"Choose directory to save images to. Click 'Cancel' to replace original images with optimized versions." /block:window /center:window /flag:81') do set "outdir=%%~a"
 )
 if defined outdir (
@@ -182,7 +170,7 @@ if defined outdir (
 			exit /b
 )))
 
-title [Loading] %name% %version%
+title [Loading] %name%
 call:clearscreen
 echo.%spacebar%
 echo. Loading. Please wait...
@@ -223,6 +211,10 @@ for /l %%a in (1,1,%thread%) do (
 	>"%logfile%jpg.%%a" echo.
 	>"%logfile%gif.%%a" echo.
 )
+
+call:runningcheck "%name% %version%"
+::echo.This process is work&pause & title %oldtitle%&exit /b
+
 call:clearscreen
 echo.%spacebar%
 echo. File Name                      ^| Original ^| Optimized ^|  Savings  ^| %% Savings
@@ -246,7 +238,7 @@ for /l %%z in (1,1,%thread%) do (
 	call:typelog gif %%z
 )
 echo.%spacebar%
-call:setitle
+call:setitle "%name%"
 call:end
 call:dopause
 if defined oldtitle title %oldtitle%
@@ -326,7 +318,7 @@ if %runic% gtr 0 (
 	call:runic2 "%~1"
 )
 endlocal
-title %name% %version%
+title %name%
 exit /b 0
 
 :runningcheck2
@@ -555,15 +547,16 @@ if not exist "%~1" exit /b
 call:waitrandom 2000
 goto:waitflag
 
-:waitrandom
+:waitrandom2
 setlocal
-if not defined istimeout goto:waitrandom2
+if not defined istimeout (call:waitrandom %~1 & exit /b)
 set "ww=%~1"
 if %~1 lss 1000 set "ww=1000"
 set /a "ww=%random%%%(%ww%/1000)"
 1>nul 2>&1 timeout /t %ww%
 endlocal & exit /b
-:waitrandom2
+:waitrandom
+setlocal
 set /a "ww=%random%%%%1"
 1>nul 2>&1 ping -n 1 -w %ww% 127.255.255.255
 endlocal & exit /b
@@ -598,7 +591,7 @@ exit /b
 :png
 call:clearscreen
 set "png="
-title [PNG] %name% %version%
+title [PNG] %name%
 echo. ----------------------
 echo. PNG optimization mode:
 echo. ----------------------
@@ -619,7 +612,7 @@ exit /b
 :jpeg
 call:clearscreen
 set "jpeg="
-title [JPEG] %name% %version%
+title [JPEG] %name%
 echo. ----------------------
 echo. JPEG otimization mode:
 echo. ----------------------
@@ -642,7 +635,7 @@ exit /b
 :gif
 call:clearscreen
 set "gif="
-title [GIF] %name% %version%
+title [GIF] %name%
 echo. ----------------------
 echo. GIF optimization mode:
 echo. ----------------------
@@ -659,7 +652,7 @@ if "%gif%" neq "0" if "%gif%" neq "1" goto:gif
 exit /b
 
 :setitle
-if "%jpeg%" equ "0" if "%png%" equ "0" if "%gif%" equ "0" (title %~1%name% %version% & exit /b)
+if "%jpeg%" equ "0" if "%png%" equ "0" if "%gif%" equ "0" (title %~1%name% & exit /b)
 if %thread% gtr 1 (
 	set "ImageNumPNG=0" & set "ImageNumJPG=0" & set "ImageNumGIF=0"
 	for /l %%c in (1,1,%thread%) do  (
@@ -669,6 +662,7 @@ if %thread% gtr 1 (
 	)
 )
 setlocal
+if "%~1" equ "" (set "fintitle=%name% %version%") else (set "fintitle=%~1")
 if %png% equ 1  (set "pngtitle=Advanced")
 if %png% equ 2  (set "pngtitle=Xtreme")
 if %jpeg% equ 1 (set "jpegtitle=Baseline")
@@ -692,7 +686,7 @@ if %gif% gtr 0 (
 	if !tmpn! gtr 0 (set "titlestr=%titlestr% ^| ")
 	set "titlestr=!titlestr!GIF %giftitle%: !perc!%%"
 )
-title [%titlestr%] %name% %version%
+title [%titlestr%] %fintitle%
 endlocal & exit /b
 
 ::%1 - input file
@@ -1213,10 +1207,12 @@ for /f "usebackq tokens=1,* delims== " %%a in ("%~1") do (
 exit /b
 
 :helpmsg
-title [Manual] %name% %version%
+title [Manual] %name%
 1>&2 (
 	echo.%spacebar%
-	echo. Image Catalyst - lossless PNG, JPEG and GIF image optimization / compression
+	echo. %name% version %version%
+	echo.
+	echo. %name% - lossless PNG, JPEG and GIF image optimization / compression
 	echo.
 	echo. Please check README for more details
 	echo.
@@ -1264,7 +1260,7 @@ if defined oldtitle title %oldtitle%
 exit /b
 
 :errormsg
-title [Error] %name% %version%
+title [Error] %name%
 if exist "%tmppath%" 1>nul 2>&1 rd /s /q "%tmppath%"
 if "%~1" neq "" 1>&2 (
 	echo.%spacebar%
