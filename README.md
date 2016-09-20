@@ -6,7 +6,7 @@ Lossless PNG, JPEG and GIF image optimization / compression for Windows.
 |:----------|:----------|
 |Adobe Photoshop CC 2015 (Export as) — 56.10 KB|Image Catalyst (Xtreme) — 51.25 KB|
 
-##### Created by [Lorents](https://github.com/lorents17) & [Res2001](https://github.com/res2001)
+Created by [Lorents](https://github.com/lorents17) & [Res2001](https://github.com/res2001)
 
 ### Tools
 
@@ -43,7 +43,7 @@ Options:
 /jpg:# JPEG optimization mode:
        1 - Encoding Process - Baseline
        2 - Encoding Process - Progressive
-       3 - use mode of original image
+       3 - use settings of original image
        0 - Skip (default)
 
 /gif:# GIF optimization mode:
@@ -89,7 +89,7 @@ call iCatalyst.bat /png:2 /jpg:2 "/outdir:true" "C:\images"
 
 - `Skip` — skip optimization of PNG images.
 
-##### Interlace option:
+Interlace option:
 - `None` — displays the image in a browser only when download is complete.
 - `Interlaced` — displays low-resolution versions of the image in a browser as the file downloads. Interlacing makes download time seem shorter, but it also increases file size (not support). 
 
@@ -165,9 +165,7 @@ giftags=true
 https://github.com/res2001/iCatalyst
 
 ### License
-
 This software is released under the terms of the [MIT](https://github.com/lorents17/iCatalyst/blob/master/LICENSE.md) license.
-
 
 ### Future plans
 - add support of optimization of SVG;
