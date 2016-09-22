@@ -6,7 +6,7 @@
 |:----------|:----------|
 |Adobe Photoshop CC 2015 (Экспортировать как) — 56,10 КБ|Image Catalyst (Xtreme) — 51,25 КБ|
 
-##### Авторы — [Lorents](https://github.com/lorents17) & [Res2001](https://github.com/res2001)
+Авторы — [**Lorents**](https://github.com/lorents17) & [**Res2001**](https://github.com/res2001)
 
 ### Инструменты
 
