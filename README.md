@@ -6,7 +6,7 @@ Lossless PNG, JPEG and GIF image optimization / compression for Windows.
 |:----------|:----------|
 |Adobe Photoshop CC 2015 (Export as) — 56.10 KB|Image Catalyst (Xtreme) — 51.25 KB|
 
-Created by [Lorents](https://github.com/lorents17) & [Res2001](https://github.com/res2001)
+Created by [**Lorents**](https://github.com/lorents17) & [**Res2001**](https://github.com/res2001)
 
 ### Tools
 
