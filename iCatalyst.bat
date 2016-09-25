@@ -984,11 +984,11 @@ for %%b in ("%filelisterr%2" "%filelisterr%3") do (
 set /a "TotalNumErr=%TotalNumErrPNG%+%TotalNumErrJPG%+%TotalNumErrGIF%"
 if %TotalNumErr% gtr 0 (
 	echo.
-	echo.                                  Error
-	echo.%spacebar%
+	echo.                                     Error
 	set "isfirst="
 	for %%a in ("%filelisterr%2*") do if %%~za gtr 0 (
 		if not defined isfirst (
+			echo.%spacebar%
 			echo.
 			echo. Images are not supported:
 			set "isfirst=1"
@@ -998,6 +998,7 @@ if %TotalNumErr% gtr 0 (
 	set "isfirst="
 	for %%a in ("%filelisterr%3*") do if %%~za gtr 0 (
 		if not defined isfirst (
+			echo.%spacebar%
 			echo.
 			echo. Images are not found:
 			set "isfirst=1"
@@ -1005,6 +1006,7 @@ if %TotalNumErr% gtr 0 (
 		type "%%~a"
 	)
 	for %%a in ("%filelisterr%") do if %%~za gtr 0 (
+		echo.%spacebar%
 		echo.
 		echo. Images with characters:
 		type "%%~a"
@@ -1030,13 +1032,13 @@ if /i "%updatecheck%" equ "true" (
 	1>nul 2>&1 del /f /q "%iculck%"
 	if exist "%iculog%" (
 		call:readini "%iculog%"
-		if "%version%" neq "!ver!" (
+		if defined ver ( if "%version%" neq "!ver!" (
 			echo.
 			echo. New version available %name% !ver! 
 			echo.
 			echo. !url!
 			echo.%spacebar%
-		)
+		))
 		1>nul 2>&1 del /f /q "%iculog%"
 	)
 )
@@ -1210,13 +1212,13 @@ exit /b
 title [Manual] %name%
 1>&2 (
 	echo.%spacebar%
-	echo. %name% version %version%
-	echo.
 	echo. %name% - lossless PNG, JPEG and GIF image optimization / compression
 	echo.
-	echo. Please check README for more details
+	echo. %name% version %version% by Lorents ^& Res2001 ^(2010-2016^)
+	echo. https://github.com/lorents17/iCatalyst
+	echo.%spacebar%
 	echo.
-	echo. call iCatalyst.bat [options] [add directories \ add files]
+	echo. Usage: call iCatalyst.bat [options] [add directories \ add files]
 	echo.
 	echo. Options:
 	echo.
@@ -1228,7 +1230,7 @@ title [Manual] %name%
 	echo. /jpg:#	JPEG optimization mode:
 	echo.	1 - Encoding Process - Baseline
 	echo.	2 - Encoding Process - Progressive
-	echo.	3 - use mode of original image
+	echo.	3 - use settings of original image
 	echo.	0 - Skip ^(default^)
 	echo.
 	echo. /gif:#	GIF optimization mode:
