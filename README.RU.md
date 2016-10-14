@@ -83,7 +83,7 @@ call iCatalyst.bat /png:2 /jpg:2 "/outdir:true" "C:\images"
 |:-------|:----------|
 |![Advanced](https://cloud.githubusercontent.com/assets/3890881/7943713/f816fd26-096e-11e5-8a8d-036e9fd443bf.png)|![Xtreme](https://cloud.githubusercontent.com/assets/3890881/12110960/92a49db6-b3a2-11e5-9953-adde90844087.png)|
 |Размер — 55,57 КБ; Время оптимизации — 1,5 с|Размер — 54,67 КБ; Время оптимизации — 7,5 с|
-|`TruePNG` + `Advdef ([libdeflate](https://github.com/ebiggers/libdeflate)`|`TruePNG` + `PNGWolfZopfli`|
+|`TruePNG` + `Advdef` ([libdeflate](https://github.com/ebiggers/libdeflate)|`TruePNG` + `PNGWolfZopfli`|
 |Степень сжатия на ~ 10% выше по сравнению с Adobe Photoshop CC 2015 (Экспортировать как)|Степень сжатия на ~ 2% выше по сравнению с режимом оптимизации Advanced, скорость сжатия ниже ~ 5 раз|
 
 - `Skip` — пропускает оптимизацию изображений PNG.
