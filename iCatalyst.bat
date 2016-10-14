@@ -6,7 +6,7 @@ setlocal enabledelayedexpansion
 if #thrd# equ #%~1# call:threadwork %4 %5 "%~2" "%~3" & exit /b
 if #updateic# equ #%~1# call:icupdate & exit /b
 set "name=Image Catalyst"
-set "version=2.6"
+set "version=2.7"
 set "oldtitle="
 set "consolepid="
 call:getpid consolepid
@@ -734,18 +734,11 @@ if %png% equ 2 (
 	if errorlevel 1 (call:saverrorlog "%~f2" 2 %~1 PNG & goto:pngfwe)
 )
 if %png% equ 1 (
-	>"%pnglog%" 2>nul truepng -y -i0 -zw7 -zc7 -zm8-9 -zs0,1,3 -f0,5 -fs:1 %advanced% -force -out "%filework%" "%~2"
-	if errorlevel 1 (call:saverrorlog "%~f2" 2 %~1 PNG & goto:pngfwe)
-	for /f "tokens=2,4,6,8,10 delims=:	" %%a in ('findstr /r /i /b /c:"zc:..zm:..zs:" "%pnglog%" 2^>nul') do (
-		set "zc=%%a"
-		set "zm=%%b"
-		set "zs=%%c"
-	)
-	1>nul 2>&1 truepng -y -i0 -zw7 -zc!zc! -zm!zm! -zs!zs! -f5 -fs:7 -na -nc -np "%filework%"
+	1>nul 2>&1 truepng -y -i0 -zw7 -zc7 -zm8-9 -zs0,1,3 -f0,5 -fs:1 %advanced% -force -out "%filework%" "%~2"
 	if errorlevel 1 (call:saverrorlog "%~f2" 2 %~1 PNG & goto:pngfwe)
 	1>nul 2>&1 deflopt -k "%filework%"
 	if errorlevel 1 (call:saverrorlog "%~f2" 2 %~1 PNG & goto:pngfwe)
-	1>nul 2>&1 advdef -z3 "%filework%"
+	1>nul 2>&1 advdef -z2 "%filework%"
 	if errorlevel 1 (call:saverrorlog "%~f2" 2 %~1 PNG & goto:pngfwe)
 )
 1>nul 2>&1 deflopt -k "%filework%"
