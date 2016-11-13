@@ -734,7 +734,7 @@ if %png% equ 2 (
 	if errorlevel 1 (call:saverrorlog "%~f2" 2 %~1 PNG & goto:pngfwe)
 )
 if %png% equ 1 (
-	1>nul 2>&1 truepng -y -i0 -zw7 -zc7 -zm8-9 -zs0,1,3 -f0,5 -fs:1 %advanced% -force -out "%filework%" "%~2"
+	1>nul 2>&1 truepng -y -i0 -zw7 -zc7 -zm8 -zs0,1,3 -f0,5 -fs:1 %advanced% -force -out "%filework%" "%~2"
 	if errorlevel 1 (call:saverrorlog "%~f2" 2 %~1 PNG & goto:pngfwe)
 	1>nul 2>&1 deflopt -k "%filework%"
 	if errorlevel 1 (call:saverrorlog "%~f2" 2 %~1 PNG & goto:pngfwe)
